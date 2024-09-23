@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://cd4w15vgx456a"]
+
+[ext_resource type="Texture2D" uid="uid://4i0ustipf0gk" path="res://assets/tinyRPG_dragonRegaliaGUI_v1_0/20240713dragonCloseButton-Sheet.png" id="1_wpj0s"]
+
+[node name="coin" type="Sprite2D"]
+texture = ExtResource("1_wpj0s")
+hframes = 4

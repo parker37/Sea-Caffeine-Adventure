@@ -1,0 +1,27 @@
+[gd_resource type="Theme" load_steps=5 format=3 uid="uid://ctrh7b4ygbvr7"]
+
+[ext_resource type="Texture2D" uid="uid://58mtrdbdpxww" path="res://assets/ui/dialogue_box.png" id="1_3i1bv"]
+[ext_resource type="Texture2D" uid="uid://dmyokas0q3tif" path="res://assets/ui/inventory/inventory_box.png" id="2_dfowh"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ca05"]
+texture = ExtResource("1_3i1bv")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+expand_margin_left = 7.0
+expand_margin_top = 7.0
+expand_margin_right = 7.0
+expand_margin_bottom = 7.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0cvr1"]
+texture = ExtResource("2_dfowh")
+texture_margin_left = 7.0
+texture_margin_top = 7.0
+texture_margin_right = 7.0
+texture_margin_bottom = 7.0
+
+[resource]
+Label/styles/normal = null
+Panel/styles/panel = SubResource("StyleBoxTexture_3ca05")
+PanelContainer/styles/panel = SubResource("StyleBoxTexture_0cvr1")

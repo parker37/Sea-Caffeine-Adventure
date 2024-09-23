@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cdusofxyfpgmb"]
+
+[ext_resource type="PackedScene" path="res://scenes/character.tscn" id="1_0f10p"]
+[ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="2_s8kgm"]
+
+[node name="room" type="Node2D"]
+
+[node name="character" parent="." instance=ExtResource("1_0f10p")]
+position = Vector2(478, 236)
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(-103, 16)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("2_s8kgm")]
+unique_name_in_owner = true
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -40.0
+offset_top = -20.0
+offset_bottom = 20.0
+grow_horizontal = 0
+grow_vertical = 2
+pivot_offset = Vector2(50, 0)
