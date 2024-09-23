@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cdusofxyfpgmb"]
 
-[ext_resource type="PackedScene" path="res://scenes/character.tscn" id="1_0f10p"]
+[ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="1_0f10p"]
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="2_s8kgm"]
 
 [node name="room" type="Node2D"]
@@ -9,7 +9,7 @@
 position = Vector2(478, 236)
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(-103, 16)
+anchor_mode = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
