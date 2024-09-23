@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://h3uulm75y1fv"]
+
+[ext_resource type="Texture2D" uid="uid://bibwvket35pwa" path="res://assets/arrowSpriteSheet.png" id="1_3dvy1"]
+[ext_resource type="Script" path="res://scripts/arrow.gd" id="2_vwekv"]
+
+[node name="arrow" type="Sprite2D"]
+texture = ExtResource("1_3dvy1")
+hframes = 4
+script = ExtResource("2_vwekv")

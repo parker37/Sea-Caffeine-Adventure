@@ -1,0 +1,24 @@
+[gd_scene load_steps=3 format=3 uid="uid://ul2fdr5fve4e"]
+
+[ext_resource type="Texture2D" uid="uid://dkj8hlc2vptwd" path="res://assets/icon.svg" id="1_uhy8g"]
+[ext_resource type="PackedScene" uid="uid://h3uulm75y1fv" path="res://scenes/arrow.tscn" id="2_dumrp"]
+
+[node name="room_3" type="Node2D"]
+
+[node name="Icon" type="Sprite2D" parent="."]
+position = Vector2(196, 200)
+texture = ExtResource("1_uhy8g")
+
+[node name="Icon2" type="Sprite2D" parent="."]
+position = Vector2(378, 263)
+texture = ExtResource("1_uhy8g")
+
+[node name="Icon3" type="Sprite2D" parent="."]
+position = Vector2(548, 200)
+texture = ExtResource("1_uhy8g")
+
+[node name="arrow" parent="." instance=ExtResource("2_dumrp")]
+position = Vector2(65, 254)
+scale = Vector2(5.875, 7.9375)
+connected_room = "res://scenes/room_1.tscn"
+facing = "left"
