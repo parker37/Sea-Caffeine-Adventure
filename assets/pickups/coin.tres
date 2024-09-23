@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=3 format=3 uid="uid://cxgb150tdm566"]
+
+[ext_resource type="Script" path="res://scripts/inventory/inventory_item.gd" id="1_qr8w5"]
+[ext_resource type="Texture2D" uid="uid://bqbhmee037kol" path="res://assets/tinyRPG_dragonRegaliaGUI_v1_0/20240713dragonOptionsButton-Sheet.png" id="2_ab7cd"]
+
+[resource]
+script = ExtResource("1_qr8w5")
+name = "coin"
+texture = ExtResource("2_ab7cd")
