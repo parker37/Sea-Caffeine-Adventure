@@ -1,6 +1,6 @@
-[gd_scene load_steps=3 format=3 uid="uid://duwe36bb6tate"]
+[gd_scene load_steps=3 format=3 uid="uid://d4jfo1fwtge23"]
 
-[ext_resource type="PackedScene" uid="uid://bwkyu0j786ja3" path="res://scenes/arrow.tscn" id="1_hlxdw"]
+[ext_resource type="PackedScene" uid="uid://h3uulm75y1fv" path="res://scenes/arrow.tscn" id="1_hlxdw"]
 [ext_resource type="Texture2D" uid="uid://dkj8hlc2vptwd" path="res://assets/icon.svg" id="4_fsxpp"]
 
 [node name="room_1" type="Node2D"]
