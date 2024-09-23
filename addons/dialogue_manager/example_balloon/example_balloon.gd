@@ -21,6 +21,8 @@ var will_hide_balloon: bool = false
 
 var _locale: String = TranslationServer.get_locale()
 
+@onready var portrait: TextureRect = %Portrait
+
 ## The current line
 var dialogue_line: DialogueLine:
 	set(next_dialogue_line):
@@ -39,8 +41,15 @@ var dialogue_line: DialogueLine:
 
 		dialogue_line = next_dialogue_line
 
-		character_label.visible = not dialogue_line.character.is_empty()
-		character_label.text = tr(dialogue_line.character, "dialogue")
+		#character_label.visible = not dialogue_line.character.is_empty()
+		#character_label.text = tr(dialogue_line.character, "dialogue")
+		
+		#set portrait
+		var portrait_path : String = "res://assets/%s.png" % dialogue_line.character.to_lower().replace(" ", "")
+		if FileAccess.file_exists(portrait_path):
+			portrait.texture = load(portrait_path)
+		else:
+			portrait.texture = null
 
 		dialogue_label.hide()
 		dialogue_label.dialogue_line = dialogue_line
@@ -83,6 +92,7 @@ var dialogue_line: DialogueLine:
 
 ## The menu of responses
 @onready var responses_menu: DialogueResponsesMenu = %ResponsesMenu
+
 
 
 func _ready() -> void:

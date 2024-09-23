@@ -1,6 +1,5 @@
 extends Sprite2D
 
-
 func _input(event):
 	if (event is InputEventMouseButton and event.is_released()):
 		if get_rect().has_point(to_local(event.position)):

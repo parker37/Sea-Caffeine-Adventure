@@ -40,10 +40,15 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Panel/Dialogue"]
+[node name="HBoxContainer" type="HBoxContainer" parent="Balloon/Panel/Dialogue"]
 layout_mode = 2
+theme_override_constants/separation = 17
 
-[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Panel/Dialogue/VBoxContainer"]
+[node name="VBoxContainer" type="VBoxContainer" parent="Balloon/Panel/Dialogue/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon/Panel/Dialogue/HBoxContainer/VBoxContainer"]
 unique_name_in_owner = true
 visible = false
 modulate = Color(0.455228, 0.253853, 0.0431307, 1)
@@ -54,12 +59,23 @@ text = "Character"
 fit_content = true
 scroll_active = false
 
-[node name="DialogueLabel" parent="Balloon/Panel/Dialogue/VBoxContainer" instance=ExtResource("2_a8ve6")]
+[node name="DialogueLabel" parent="Balloon/Panel/Dialogue/HBoxContainer/VBoxContainer" instance=ExtResource("2_a8ve6")]
 unique_name_in_owner = true
 modulate = Color(0.10147, 0.204328, 0.394926, 1)
 layout_mode = 2
 size_flags_vertical = 3
 text = "Dialogue..."
+
+[node name="PortaitContainer" type="Panel" parent="Balloon/Panel/Dialogue/HBoxContainer"]
+custom_minimum_size = Vector2(160, 0)
+layout_mode = 2
+
+[node name="Portrait" type="TextureRect" parent="Balloon/Panel/Dialogue/HBoxContainer/PortaitContainer"]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(128, 128)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
 visible = false
@@ -87,16 +103,6 @@ response_template = NodePath("ResponseExample")
 [node name="ResponseExample" type="Button" parent="Balloon/Responses/ResponsesMenu"]
 layout_mode = 2
 text = "Response example"
-
-[node name="Panel2" type="Panel" parent="Balloon"]
-layout_mode = 1
-anchors_preset = -1
-anchor_right = 0.143
-anchor_bottom = 1.0
-offset_left = 954.0
-offset_top = 471.0
-offset_right = 962.264
-offset_bottom = -25.0
 
 [connection signal="gui_input" from="Balloon" to="." method="_on_balloon_gui_input"]
 [connection signal="response_selected" from="Balloon/Responses/ResponsesMenu" to="." method="_on_responses_menu_response_selected"]
