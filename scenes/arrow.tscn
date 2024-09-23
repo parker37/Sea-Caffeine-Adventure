@@ -1,6 +1,12 @@
+<<<<<<< Updated upstream
 [gd_scene load_steps=3 format=3 uid="uid://h3uulm75y1fv"]
 
 [ext_resource type="Texture2D" uid="uid://bibwvket35pwa" path="res://assets/arrowSpriteSheet.png" id="1_3dvy1"]
+=======
+[gd_scene load_steps=3 format=3 uid="uid://ctctl1d0b6ekd"]
+
+[ext_resource type="Texture2D" path="res://assets/arrowSpriteSheet.png" id="1_3dvy1"]
+>>>>>>> Stashed changes
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="2_vwekv"]
 
 [node name="arrow" type="Sprite2D"]
