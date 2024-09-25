@@ -41,8 +41,8 @@ var dialogue_line: DialogueLine:
 
 		dialogue_line = next_dialogue_line
 
-		#character_label.visible = not dialogue_line.character.is_empty()
-		#character_label.text = tr(dialogue_line.character, "dialogue")
+		character_label.visible = not dialogue_line.character.is_empty()
+		character_label.text = tr(dialogue_line.character, "dialogue")
 		
 		#set portrait
 		var portrait_path : String = "res://assets/fish/%s.png" % dialogue_line.character.to_lower().replace(" ", "")
