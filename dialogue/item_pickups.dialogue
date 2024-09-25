@@ -1,0 +1,9 @@
+~ seaweed
+Seaweed: This green color looks very strong. It could probably overpower any color I want.
+set dialogue_on = false
+=> END
+
+~ sanddollar
+Sand Dollar: Money!
+set dialogue_on = false
+=> END

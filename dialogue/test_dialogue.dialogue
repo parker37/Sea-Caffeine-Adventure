@@ -1,6 +1,16 @@
 ~ start
 
-Koi: Hi! This is a test.
-Blue Tang: This is the second one.
+Koi: Hi! This is a [wait=1]test.
+Blue Tang: [shake rate=20 level=10]This is the second one.[/shake]
+
+Koi: Choose a Response...
+- Talk to Koi
+	% Koi: This is random line 1.
+	% Koi: This is random line 2.
+	%1 Koi: This is weighted random line 3.
+- Talk to Blue Tang
+	Blue Tang: [[Hi|Hello|Howdy]]
+
+set dialogue_on = false
 
 => END
