@@ -6,31 +6,32 @@ extends Control
 const inv_slot_square_radius = 34 * 34
 
 func _input(event: InputEvent) -> void:
-	if(event is InputEventMouseButton and event.is_released()):
-		var outside_inventory = true
+	if(not event is InputEventMouseButton):
+		return
+		
+	if(event.is_action_released("Click")):
 		for slot: TextureRect in inv_slots:
 			var trueItemPosition = event.position - Vector2(32, 32)
 			if(trueItemPosition.distance_squared_to(slot.global_position) < inv_slot_square_radius):
-				highlight_slot(slot.slot_index)
-				outside_inventory = false
+				highlight_slot(slot.slot_index, true)
 				break
-		if(outside_inventory and inventory.selected):
-			unhighlight_slot()
-	else:
-		pass
+	elif(event.is_action_released("Right-Click") and inventory.selected):
+		unhighlight_slot()
 
-func add_item(item: InvItem, slot: int):
-	pass
-
-func remove_item(item: InvItem, slot: int):
-	pass
+func _ready():
+	inventory.update_inv_ui.connect(update_display)
 
 func unhighlight_slot():
 	inv_slots[inventory.selectedIndex].toggle_highlight()
 	inventory.selected = false
 
-func highlight_slot(slot_index: int):
-	if(inventory.selected):
+func highlight_slot(slot_index: int, unghighlight_selected: bool):
+	if(inventory.selected and unghighlight_selected):
+		#deselects slot on second click
+		if(inventory.selectedIndex == slot_index):
+			unhighlight_slot()
+			return
+			
 		inv_slots[inventory.selectedIndex].toggle_highlight()
 	else:
 		inventory.selected = true
