@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://tgiyks4spnqa"
-path="res://.godot/imported/empty_cup.png-87e33e02864afcde2a307f2085dee298.ctex"
+uid="uid://b7qm3nd3b3jqx"
+path="res://.godot/imported/sharktoothhighlight.png-ad491e4ae1dd425357d321780962438d.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/icons/empty_cup.png"
-dest_files=["res://.godot/imported/empty_cup.png-87e33e02864afcde2a307f2085dee298.ctex"]
+source_file="res://assets/sharktoothhighlight.png"
+dest_files=["res://.godot/imported/sharktoothhighlight.png-ad491e4ae1dd425357d321780962438d.ctex"]
 
 [params]
 
