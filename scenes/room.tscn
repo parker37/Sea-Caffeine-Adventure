@@ -33,5 +33,5 @@ position = Vector2(544, 553)
 item_name = "sanddollar"
 
 [node name="pickup" parent="." instance=ExtResource("3_5a762")]
-position = Vector2(640, 549)
+position = Vector2(600, 553)
 item_name = "seaweed"
