@@ -1,12 +1,15 @@
 extends Area2D
 
+#textures for changing sprite
 var plain_sprite : Texture2D
 var highlight_sprite : Texture2D
 
+#strings for file paths
 var plain_string : String
 var highlight_string : String
 
 func _ready():
+	#set file paths to images
 	match get_parent().item_name:
 		"seaweed":
 			plain_string = "res://assets/icons/seaweed.png"
@@ -14,17 +17,19 @@ func _ready():
 		"sanddollar":
 			plain_string = "res://assets/icons/sanddollar.png"
 			highlight_string = "res://assets/sanddollar_highlight.png"
-			
-	var plain_image = Image.load_from_file(plain_string)
-	plain_sprite = ImageTexture.create_from_image(plain_image)
 	
-	var highlight_image = Image.load_from_file(highlight_string)
-	highlight_sprite = ImageTexture.create_from_image(highlight_image)
+	#set sprite to file paths
+	plain_sprite = load(plain_string)
+	highlight_sprite = load(highlight_string)
 	
+	#set default texture to plain
 	get_parent().texture = plain_sprite
+	
+	#connect signals for mouse enter and exit
 	connect("mouse_entered", on_mouse_enter)
 	connect("mouse_exited", on_mouse_exit)
-	
+
+#change sprite based on whether or not the mouse is hovering
 func on_mouse_enter():
 	get_parent().texture = highlight_sprite
 	
