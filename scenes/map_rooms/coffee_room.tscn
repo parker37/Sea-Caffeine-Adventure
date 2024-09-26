@@ -4,12 +4,13 @@
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="2_s8kgm"]
 [ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="3_20cjx"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_s01ku"]
-[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="5_02ugh"]
+[ext_resource type="Resource" uid="uid://dcdpij8q23w40" path="res://assets/pickups/emptycup.tres" id="5_1adyy"]
 
 [node name="room" type="Node2D"]
 
 [node name="character" parent="." instance=ExtResource("1_0f10p")]
-position = Vector2(478, 236)
+position = Vector2(522, 340)
+character = "charles"
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
@@ -26,11 +27,21 @@ grow_horizontal = 0
 pivot_offset = Vector2(50, 0)
 metadata/_edit_use_anchors_ = true
 
-[node name="next_room" parent="." instance=ExtResource("3_20cjx")]
+[node name="to_clam_room" parent="." instance=ExtResource("3_20cjx")]
 position = Vector2(38, 324)
 connected_room = "res://scenes/map_rooms/clam_room.tscn"
 facing = "left"
 
+[node name="to_squid_room" parent="." instance=ExtResource("3_20cjx")]
+position = Vector2(532, 38)
+connected_room = "res://scenes/map_rooms/squid_room.tscn"
+facing = "up"
+
+[node name="to_shark_tank" parent="." instance=ExtResource("3_20cjx")]
+position = Vector2(1045, 323)
+connected_room = "res://scenes/map_rooms/shark_tank.tscn"
+facing = "right"
+
 [node name="pickup" parent="." instance=ExtResource("4_s01ku")]
-position = Vector2(453, 468)
-item = ExtResource("5_02ugh")
+position = Vector2(944, 587)
+item = ExtResource("5_1adyy")

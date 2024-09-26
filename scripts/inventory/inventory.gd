@@ -7,6 +7,8 @@ class_name Inventory
 @export var selectedIndex: int = 0
 var inventory_slots: int = 6
 
+var item_to_trash : int = -1
+
 signal update_inv_ui
 
 func _init() -> void:
@@ -24,6 +26,9 @@ func remove_item(query: Variant):
 	# Checks if query is an int, which is used as slot index
 	match typeof(query):
 		TYPE_INT:
+			if Global.is_trashing and items[query] != null:
+				if items[query].name not in Global.coffee:
+					return
 			items[query] = null
 			update_inv_ui.emit()
 			
@@ -62,3 +67,8 @@ func check_for_item(item_name: String, count: int = 1) -> bool:
 		return true
 	else:
 		return false 
+
+func has_item_to_trash() -> bool:
+	if item_to_trash >= 0 and selected:
+		return true
+	return false

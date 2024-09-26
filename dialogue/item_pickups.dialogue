@@ -1,9 +1,30 @@
 ~ seaweed
-Seaweed: This green color looks very strong. It could probably overpower any color I want.
+if inventory.check_for_item("sharktooth"):
+	set picked_up_seaweed = true
+	Seaweed: This green color looks very strong. It could probably overpower any color I want.
+	do inventory.add_item(load("res://assets/pickups/seaweed.tres"))
+	do inventory.remove_item("sharktooth")
+else:
+	Seaweed: If only there was some way I could obtain this...
 set dialogue_on = false
 => END
 
 ~ sanddollar
-Sand Dollar: Money!
+if !picked_up_sanddollar:
+	Sand Dollar: Money!
+	set picked_up_sanddollar = true
+do inventory.add_item(load("res://assets/pickups/sanddollar.tres"))
+set dialogue_on = false
+=> END
+
+~ emptycup
+Empty Cup: This would probably be good for holding something.
+do inventory.add_item(load("res://assets/pickups/emptycup.tres"))
+set dialogue_on = false
+=> END
+
+~ sharktooth
+Shark Tooth: This thing is pretty sharp, I should be careful.
+do inventory.add_item(load("res://assets/pickups/sharktooth.tres"))
 set dialogue_on = false
 => END

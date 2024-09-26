@@ -1,0 +1,160 @@
+~ clam
+if pearl_first_talk:
+	Pearl: Hi! Oh my gosh I love visitors. How can I help you today?
+	Pearl: Oh you're trying to open a coffee shop? I would be happy to help. But first, I have to know if this coffee is any good.
+	set pearl_first_talk = false
+	
+if !completed_clam:
+	Pearl: Do you have any coffee for me to try?
+	- Right here
+		if inventory.check_for_item("darkcoffee"):
+			do inventory.remove_item("darkcoffee")
+			Pearl: Oh my! This is fantastic. Everyone has to know about this.
+			Pearl: I'll gladly help. Go let your friend know that we have a business!
+			set completed_clam = true
+		else:
+			Pearl: Oh, no coffee yet? Don't worry, I'm patient.
+	- I'm working on it
+	
+else if has_table:
+	Pearl: How can I help you today?
+	- Make coffee
+		if turned_in_salt:
+			Pearl: Of course. What recipe do you want to make?
+			- Dark Coffee
+				do inventory.add_item(load("res://assets/pickups/darkcoffee.tres"))
+			- Green Coffee
+				do inventory.add_item(load("res://assets/pickups/greencoffee.tres"))
+			- Milk Coffee
+				do inventory.add_item(load("res://assets/pickups/milkcoffee.tres"))
+			- Sea Salt Foam Coffee
+				do inventory.add_item(load("res://assets/pickups/seasaltfoam.tres"))
+		else if turned_in_milk:
+			Pearl: Of course. What recipe do you want to make?
+			- Dark Coffee
+				do inventory.add_item(load("res://assets/pickups/darkcoffee.tres"))
+			- Green Coffee
+				do inventory.add_item(load("res://assets/pickups/greencoffee.tres"))
+			- Milk Coffee
+				do inventory.add_item(load("res://assets/pickups/milkcoffee.tres"))
+		else if turned_in_seaweed:
+			Pearl: Of course. What recipe do you want to make?
+			- Dark Coffee
+				do inventory.add_item(load("res://assets/pickups/darkcoffee.tres"))
+			- Green Coffee
+				do inventory.add_item(load("res://assets/pickups/greencoffee.tres"))
+		else:
+			Pearl: Of course. What recipe do you want to make?
+			- Dark Coffee
+				do inventory.add_item(load("res://assets/pickups/darkcoffee.tres"))
+	- Trash coffee
+		set is_trashing = true
+		Pearl: Which coffee would you like to trash?
+		- Cancel
+		- Slot 1
+			do inventory.remove_item(0)
+		- Slot 2
+			do inventory.remove_item(1)
+		- Slot 3
+			do inventory.remove_item(2)
+		- Slot 4
+			do inventory.remove_item(3)
+		- Slot 5
+			do inventory.remove_item(4)
+		- Slot 6
+			do inventory.remove_item(5)
+		
+set dialogue_on = false
+=> END
+
+~ charles
+if start_quest:
+	Charles: Hey! Over here!
+	Charles: I need your help with something. I love coffee and want to sell it down here.
+	Charles: Problem is, I don't have anything that I can run the shop with. I will need ingredients and a place to set up shop.
+	Charles: Think you're up for the job?
+	- I guess...
+	- I would love to help!
+	set start_quest = false
+	
+if !turned_in_cup and !turned_in_squidink:
+	Charles: First we need something to make coffee with, and also something to put it in...
+	- I got some stuff for that
+		if inventory.check_for_item("emptycup") and inventory.check_for_item("squidinkbottle"):
+			do inventory.remove_item("emptycup")
+			do inventory.remove_item("squidinkbottle")
+			Charles: Oh wow! This will work great. I'll go work on a prototype.
+			Charles: ...
+			Charles: Here you go! My first squid ink coffee. You can do whatever you want with it.
+			- Thanks
+			set turned_in_cup = true
+			set turned_in_squidink = true
+			do inventory.add_item(load("res://assets/pickups/darkcoffee.tres"))
+			Charles: Now we need somewhere to make and sell the coffee.
+		else:
+			Charles: I need more than that. Come back to me when you have what I'm looking for.
+	- I'm working on it
+	
+#check if has table
+else if !has_table:
+	Charles: I still need somewhere to sell the coffee. I don't have the sand dollars for that big fancy building yet.
+	- I figured something out
+		if completed_clam:
+			Charles: Oh that's a fantastic idea! And Pearl was really willing to help? How nice.
+			Charles: Now that we a table to make our coffee at, we can start creating more recipes.
+			Charles: To make a cup of coffee, just talk to Pearl. We only have one recipe for now but we'll work on getting more.
+			set has_table = true
+		else:
+			Charles: That doesn't really sound like an idea yet. Go explore some more and see if you can figure anything out.
+	- I'm on it
+	
+set dialogue_on = false
+=> END
+
+~ squid
+Riptide: You want my ink? That stuff isn't free buddy.
+Riptide: Give me 5 sand dollars and its all yours.
+- Here you go
+	if inventory.check_for_item("sanddollar", 5):
+		do inventory.remove_item("sanddollar")
+		do inventory.remove_item("sanddollar")
+		do inventory.remove_item("sanddollar")
+		do inventory.remove_item("sanddollar")
+		do inventory.remove_item("sanddollar")
+		Riptide: Thanks buddy. Here's the stuff.
+		do inventory.add_item(load("res://assets/pickups/squidinkbottle.tres"))
+		set dialogue_on = false
+		=> END
+	else:
+		Riptide: Stop my pulling my tentacle. I said 5. Come back later.
+		set dialogue_on = false
+		=> END
+- I'll be right back
+	set dialogue_on = false
+	=> END
+
+~ shark
+Shark 1: You want us to fund your coffee shop?
+Shark 2: Coffee, in the ocean? It doesn't sound very profitable.
+Earl: You'll have to bring us some proof that this is a viable business opportunity.
+Shark 1: Bring us each a coffee of our choice and then we can discuss.
+- What do you want?
+	Shark 1: I want a coffee with a nice green color.
+	Shark 2: I don't like bitter stuff.
+	Earl: Give me something salty.
+	set dialogue_on = false
+	=> END
+	
+- I have your coffee right here
+	if inventory.check_for_item("greencoffee") and inventory.check_for_item("milkcoffee") and inventory.check_for_item("seasaltfoam"):
+		Shark 1: Thanks!
+		Shark 2: This is tasty.
+		Earl: Fine. You have our financial support. But don't mess this up.
+	else:
+		Shark 2: This isn't what we're looking for.
+		Shark 1: Come back later.
+	set dialogue_on = false
+	=> END
+- I'll be back later
+	set dialogue_on = false
+	=> END

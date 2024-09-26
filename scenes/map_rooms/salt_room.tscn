@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://bmdwdrgugbcbc"]
+[gd_scene load_steps=5 format=3 uid="uid://bmdwdrgugbcbc"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_xmg6k"]
+[ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_dky61"]
+[ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_mv7dp"]
+[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="4_7jf3r"]
 
 [node name="SaltRoom" type="Node2D"]
 
@@ -17,3 +20,18 @@ offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
 pivot_offset = Vector2(50, 0)
+
+[node name="to_clam_room" parent="." instance=ExtResource("2_dky61")]
+position = Vector2(1035, 324)
+connected_room = "res://scenes/map_rooms/clam_room.tscn"
+facing = "right"
+
+[node name="to_whale_room" parent="." instance=ExtResource("2_dky61")]
+position = Vector2(551, 55)
+connected_room = "res://scenes/map_rooms/whale_room.tscn"
+facing = "up"
+
+[node name="pickup" parent="." instance=ExtResource("3_mv7dp")]
+position = Vector2(682, 550)
+item = ExtResource("4_7jf3r")
+ID = 1

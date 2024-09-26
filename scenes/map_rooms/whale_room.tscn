@@ -1,6 +1,9 @@
-[gd_scene load_steps=2 format=3 uid="uid://crxmperrhgaq5"]
+[gd_scene load_steps=5 format=3 uid="uid://crxmperrhgaq5"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_synjt"]
+[ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_dqasq"]
+[ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_3quwr"]
+[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="4_va6y0"]
 
 [node name="WhaleRoom" type="Node2D"]
 
@@ -17,3 +20,18 @@ offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
 pivot_offset = Vector2(50, 0)
+
+[node name="to_salt_room" parent="." instance=ExtResource("2_dqasq")]
+position = Vector2(569, 608)
+connected_room = "res://scenes/map_rooms/salt_room.tscn"
+facing = "down"
+
+[node name="to_seaweed_room" parent="." instance=ExtResource("2_dqasq")]
+position = Vector2(1046, 308)
+connected_room = "res://scenes/map_rooms/seaweed_room.tscn"
+facing = "right"
+
+[node name="pickup" parent="." instance=ExtResource("3_3quwr")]
+position = Vector2(377, 534)
+item = ExtResource("4_va6y0")
+ID = 4

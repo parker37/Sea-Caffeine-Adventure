@@ -1,5 +1,7 @@
 extends Sprite2D
 
+@export var character : String
+
 func _input(event):
 	if (event is InputEventMouseButton 
 	and event.is_pressed()
@@ -7,4 +9,4 @@ func _input(event):
 	and !Global.dialogue_on):
 		if (get_rect().has_point(to_local(event.position))):
 			Global.dialogue_on = true
-			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/test_dialogue.dialogue"), "start")
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/character_dialogue.dialogue"), character)

@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://b518edxjohap5"]
+[gd_scene load_steps=6 format=3 uid="uid://b518edxjohap5"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_2bqro"]
+[ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_kcod7"]
+[ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="3_rnw6i"]
+[ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_sc48i"]
+[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="5_763mj"]
 
 [node name="ClamRoom" type="Node2D"]
 
@@ -17,3 +21,26 @@ offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
 pivot_offset = Vector2(50, 0)
+
+[node name="to_salt_room" parent="." instance=ExtResource("2_kcod7")]
+position = Vector2(41, 320)
+connected_room = "res://scenes/map_rooms/salt_room.tscn"
+facing = "left"
+
+[node name="to_seaweed_room" parent="." instance=ExtResource("2_kcod7")]
+position = Vector2(548, 39)
+connected_room = "res://scenes/map_rooms/seaweed_room.tscn"
+facing = "up"
+
+[node name="to_coffee_room" parent="." instance=ExtResource("2_kcod7")]
+position = Vector2(1034, 306)
+connected_room = "res://scenes/map_rooms/coffee_room.tscn"
+facing = "right"
+
+[node name="character" parent="." instance=ExtResource("3_rnw6i")]
+position = Vector2(547, 342)
+character = "clam"
+
+[node name="pickup" parent="." instance=ExtResource("4_sc48i")]
+position = Vector2(91, 578)
+item = ExtResource("5_763mj")

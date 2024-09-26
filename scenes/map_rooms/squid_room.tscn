@@ -1,6 +1,10 @@
-[gd_scene load_steps=2 format=3 uid="uid://s2b8pbkr6upl"]
+[gd_scene load_steps=6 format=3 uid="uid://s2b8pbkr6upl"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_nfgfb"]
+[ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_8eshw"]
+[ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="3_4fycx"]
+[ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_ukvg1"]
+[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="5_nfxa1"]
 
 [node name="SquidRoom" type="Node2D"]
 
@@ -17,3 +21,22 @@ offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
 pivot_offset = Vector2(50, 0)
+
+[node name="to_seaweed_room" parent="." instance=ExtResource("2_8eshw")]
+position = Vector2(53, 298)
+connected_room = "res://scenes/map_rooms/seaweed_room.tscn"
+facing = "left"
+
+[node name="to_coffee_room" parent="." instance=ExtResource("2_8eshw")]
+position = Vector2(576, 608)
+connected_room = "res://scenes/map_rooms/coffee_room.tscn"
+facing = "down"
+
+[node name="character" parent="." instance=ExtResource("3_4fycx")]
+position = Vector2(540, 326)
+character = "squid"
+
+[node name="pickup" parent="." instance=ExtResource("4_ukvg1")]
+position = Vector2(305, 501)
+item = ExtResource("5_nfxa1")
+ID = 3

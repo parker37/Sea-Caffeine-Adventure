@@ -13,7 +13,6 @@ texture = ExtResource("1_7eiyv")
 script = ExtResource("2_t2tv8")
 
 [node name="Area2D" type="Area2D" parent="."]
-visible = false
 script = ExtResource("2_hwvxu")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]

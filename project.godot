@@ -53,7 +53,7 @@ Right-Click={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/test_dialogue.dialogue", "res://dialogue/item_pickups.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/item_pickups.dialogue", "res://dialogue/character_dialogue.dialogue")
 
 [rendering]
 
