@@ -9,9 +9,12 @@ var inventory_slots: int = 6
 
 signal update_inv_ui
 
+func _init() -> void:
+	items = [null, null, null, null, null, null]
+
 func add_item(new_item: InvItem):
 	for i: int in range(inventory_slots):
-		if (items[i] == null):
+		if (!items[i]):
 			items[i] = new_item
 			update_inv_ui.emit()
 			break
@@ -25,7 +28,7 @@ func remove_item(query: Variant):
 			update_inv_ui.emit()
 			
 		TYPE_OBJECT:
-			if(not query is InvItem):
+			if(!query is InvItem):
 				push_error("Error: Object passed is not InvItem type!")
 				return
 			var index = items.find(query)
@@ -36,6 +39,8 @@ func remove_item(query: Variant):
 			
 		TYPE_STRING:
 			for i: int in range(inventory_slots):
+				if(!items[i]):
+					continue
 				if(items[i].name == query):
 					items[i] = null
 					update_inv_ui.emit()
@@ -46,6 +51,8 @@ func check_for_item(item_name: String, count: int = 1) -> bool:
 	var exists = false
 	var num_found = 0
 	for i: int in range(inventory_slots):
+		if(!items[i]):
+			continue
 		if(items[i].name == item_name):
 			exists = true
 			num_found += 1

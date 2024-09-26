@@ -11,6 +11,10 @@ Koi: Choose a Response...
 - Talk to Blue Tang
 	Blue Tang: [[Hi|Hello|Howdy]]
 
-set dialogue_on = false
 
+if inventory.check_for_item("sanddollar", 3):
+	Koi: Thanks for the payment!
+
+
+set dialogue_on = false
 => END

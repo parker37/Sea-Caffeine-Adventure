@@ -1,6 +1,6 @@
 extends Control
 
-@onready var inventory = preload("res://assets/ui/inventory/player_inventory.tres")
+var inventory: Inventory
 @onready var inv_slots: Array = $PanelContainer/GridContainer.get_children()
 
 const inv_slot_square_radius = 34 * 34
@@ -8,17 +8,20 @@ const inv_slot_square_radius = 34 * 34
 func _input(event: InputEvent) -> void:
 	if(not event is InputEventMouseButton):
 		return
+	if(Global.dialogue_on):
+		return
 		
-	if(event.is_action_released("Click")):
+	if(event.is_action_pressed("Click")):
 		for slot: TextureRect in inv_slots:
 			var trueItemPosition = event.position - Vector2(32, 32)
 			if(trueItemPosition.distance_squared_to(slot.global_position) < inv_slot_square_radius):
 				highlight_slot(slot.slot_index, true)
 				break
-	elif(event.is_action_released("Right-Click") and inventory.selected):
+	elif(event.is_action_pressed("Right-Click") and inventory.selected):
 		unhighlight_slot()
 
 func _ready():
+	inventory = Global.inventory
 	inventory.update_inv_ui.connect(update_display)
 
 func unhighlight_slot():
@@ -43,6 +46,6 @@ func highlight_slot(slot_index: int, unghighlight_selected: bool):
 func update_display():
 	for idx in range(inv_slots.size()):
 		if (inventory.items[idx] != null):
-			inv_slots[idx].update_item(inventory.items[idx].texture)
+			inv_slots[idx].update_texture(inventory.items[idx].texture)
 		else:
-			inv_slots[idx].update_item(null)
+			inv_slots[idx].update_texture(null)

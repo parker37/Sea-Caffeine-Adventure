@@ -3,8 +3,8 @@
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="1_0f10p"]
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="2_s8kgm"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_5a762"]
-[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="4_6ybmt"]
-[ext_resource type="Resource" uid="uid://uyv401lrkeua" path="res://assets/pickups/seaweed.tres" id="4_p1l36"]
+[ext_resource type="Resource" path="res://assets/pickups/sanddollar.tres" id="4_6ybmt"]
+[ext_resource type="Resource" path="res://assets/pickups/seaweed.tres" id="4_p1l36"]
 
 [node name="room" type="Node2D"]
 
@@ -17,16 +17,12 @@ anchor_mode = 0
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("2_s8kgm")]
-anchors_preset = 6
+anchors_preset = 1
 anchor_left = 1.0
-anchor_top = 0.5
 anchor_right = 1.0
-anchor_bottom = 0.5
 offset_left = -40.0
-offset_top = -20.0
-offset_bottom = 20.0
+offset_bottom = 40.0
 grow_horizontal = 0
-grow_vertical = 2
 pivot_offset = Vector2(50, 0)
 
 [node name="seaweed" parent="." instance=ExtResource("3_5a762")]
