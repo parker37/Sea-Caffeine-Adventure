@@ -7,6 +7,20 @@ var is_trashing : bool
 
 var coffee : Array = ["darkcoffee", "milkcoffee", "greencoffee", "seasaltfoam"]
 
+#preload item resources
+var darkcoffee_item = preload("res://assets/pickups/darkcoffee.tres")
+var emptycup_item = preload("res://assets/pickups/emptycup.tres")
+var greencoffee_item = preload("res://assets/pickups/greencoffee.tres")
+var milkbottle_item = preload("res://assets/pickups/milkbottle.tres")
+var milkcoffee_item = preload("res://assets/pickups/milkcoffee.tres")
+var rocksalt_item = preload("res://assets/pickups/rocksalt.tres")
+var sanddollar_item = preload("res://assets/pickups/sanddollar.tres")
+var seasaltfoam_item = preload("res://assets/pickups/seasaltfoam.tres")
+var seaweed_item = preload("res://assets/pickups/seaweed.tres")
+var sharktooth_item = preload("res://assets/pickups/sharktooth.tres")
+var squidinkbottle_item = preload("res://assets/pickups/squidinkbottle.tres")
+
+#enum for item ids
 enum pickup_ids{
 	sanddollar_clam = 0,
 	sanddollar_salt = 1,

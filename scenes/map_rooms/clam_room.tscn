@@ -38,7 +38,7 @@ connected_room = "res://scenes/map_rooms/coffee_room.tscn"
 facing = "right"
 
 [node name="character" parent="." instance=ExtResource("3_rnw6i")]
-position = Vector2(547, 342)
+position = Vector2(541, 527)
 character = "clam"
 
 [node name="pickup" parent="." instance=ExtResource("4_sc48i")]

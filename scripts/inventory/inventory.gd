@@ -67,8 +67,3 @@ func check_for_item(item_name: String, count: int = 1) -> bool:
 		return true
 	else:
 		return false 
-
-func has_item_to_trash() -> bool:
-	if item_to_trash >= 0 and selected:
-		return true
-	return false

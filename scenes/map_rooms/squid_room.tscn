@@ -33,7 +33,7 @@ connected_room = "res://scenes/map_rooms/coffee_room.tscn"
 facing = "down"
 
 [node name="character" parent="." instance=ExtResource("3_4fycx")]
-position = Vector2(540, 326)
+position = Vector2(800, 155)
 character = "squid"
 
 [node name="pickup" parent="." instance=ExtResource("4_ukvg1")]

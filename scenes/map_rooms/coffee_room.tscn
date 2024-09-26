@@ -9,7 +9,7 @@
 [node name="room" type="Node2D"]
 
 [node name="character" parent="." instance=ExtResource("1_0f10p")]
-position = Vector2(522, 340)
+position = Vector2(540, 354)
 character = "charles"
 
 [node name="Camera2D" type="Camera2D" parent="."]
