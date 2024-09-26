@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cdusofxyfpgmb"]
+[gd_scene load_steps=6 format=3 uid="uid://cdusofxyfpgmb"]
 
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="1_0f10p"]
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="2_s8kgm"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_5a762"]
+[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="4_6ybmt"]
+[ext_resource type="Resource" uid="uid://uyv401lrkeua" path="res://assets/pickups/seaweed.tres" id="4_p1l36"]
 
 [node name="room" type="Node2D"]
 
@@ -29,8 +31,8 @@ pivot_offset = Vector2(50, 0)
 
 [node name="seaweed" parent="." instance=ExtResource("3_5a762")]
 position = Vector2(544, 553)
-item_name = "sanddollar"
+item = ExtResource("4_p1l36")
 
 [node name="pickup" parent="." instance=ExtResource("3_5a762")]
 position = Vector2(600, 553)
-item_name = "seaweed"
+item = ExtResource("4_6ybmt")

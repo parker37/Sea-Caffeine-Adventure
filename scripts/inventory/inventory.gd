@@ -10,9 +10,9 @@ var inventory_slots: int = 6
 signal update_inv_ui
 
 func add_item(new_item: InvItem):
-	for slot: InvItem in items:
-		if (slot == null):
-			slot = new_item
+	for i: int in range(inventory_slots):
+		if (items[i] == null):
+			items[i] = new_item
 			update_inv_ui.emit()
 			break
 		pass
