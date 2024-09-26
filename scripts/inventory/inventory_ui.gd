@@ -23,6 +23,7 @@ func _input(event: InputEvent) -> void:
 func _ready():
 	inventory = Global.inventory
 	inventory.update_inv_ui.connect(update_display)
+	update_display()
 
 func unhighlight_slot():
 	inv_slots[inventory.selectedIndex].toggle_highlight()

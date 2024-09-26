@@ -1,0 +1,19 @@
+[gd_scene load_steps=2 format=3 uid="uid://bub215ejpudh"]
+
+[ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_wppdp"]
+
+[node name="SeaweedRoom" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("1_wppdp")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+pivot_offset = Vector2(50, 0)

@@ -2,9 +2,9 @@
 
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="1_0f10p"]
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="2_s8kgm"]
-[ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_5a762"]
-[ext_resource type="Resource" path="res://assets/pickups/sanddollar.tres" id="4_6ybmt"]
-[ext_resource type="Resource" path="res://assets/pickups/seaweed.tres" id="4_p1l36"]
+[ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="3_20cjx"]
+[ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_s01ku"]
+[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="5_02ugh"]
 
 [node name="room" type="Node2D"]
 
@@ -24,11 +24,13 @@ offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
 pivot_offset = Vector2(50, 0)
+metadata/_edit_use_anchors_ = true
 
-[node name="seaweed" parent="." instance=ExtResource("3_5a762")]
-position = Vector2(544, 553)
-item = ExtResource("4_p1l36")
+[node name="next_room" parent="." instance=ExtResource("3_20cjx")]
+position = Vector2(38, 324)
+connected_room = "res://scenes/map_rooms/clam_room.tscn"
+facing = "left"
 
-[node name="pickup" parent="." instance=ExtResource("3_5a762")]
-position = Vector2(600, 553)
-item = ExtResource("4_6ybmt")
+[node name="pickup" parent="." instance=ExtResource("4_s01ku")]
+position = Vector2(453, 468)
+item = ExtResource("5_02ugh")
