@@ -1,3 +1,4 @@
+#region Clam
 ~ clam
 if start_quest:
 	Pearl: Hi, I'm Pearl. I love making new friends, stop by anytime!
@@ -75,7 +76,9 @@ else if has_table:
 		
 set dialogue_on = false
 => END
+#endregion
 
+#region Charles
 ~ charles
 if start_quest:
 	Charles: Hey! Over here!
@@ -146,7 +149,9 @@ else if completed_sharks:
 	
 set dialogue_on = false
 => END
+#endregion
 
+#region Squid
 ~ squid
 if start_quest:
 	Riptide: What's up dude, you new around here? You don't know the famous Riptide?
@@ -177,7 +182,9 @@ else:
 	Riptide: Haha, sucker. Squid ink is nowhere near worth 5 sand dollars.
 set dialogue_on = false
 => END
+#endregion
 
+#region Pufferfish
 ~ pufferfish
 if start_quest:
 	Tough Guy: Beat it, kid.
@@ -201,7 +208,9 @@ else:
 	Tough Guy: I've already helped you. Unless you're looking for a fight, I suggest you carry on.
 set dialogue_on = false
 => END
+#endregion
 
+#region Whale
 ~ whale
 if start_quest:
 	Cresta: Hi darling, I'm Cresta. What a pleasure to meet you.
@@ -224,7 +233,9 @@ else:
 	Cresta: I hope the milk worked well for your coffee. Maybe I'll stop by and get more seaweed coffee some day.
 set dialogue_on = false
 => END
+#endregion
 
+#region Sharks
 ~ shark
 if start_quest:
 	Shark 1: We're the sharks and if you want something, we get it done.
@@ -266,3 +277,4 @@ else:
 	Earl: Are we done here?
 set dialogue_on = false
 => END
+#endregion

@@ -74,8 +74,9 @@ layout_mode = 2
 unique_name_in_owner = true
 custom_minimum_size = Vector2(128, 128)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
+offset_left = -1.0
+offset_right = 161.0
+offset_bottom = 164.0
 
 [node name="Responses" type="MarginContainer" parent="Balloon"]
 layout_mode = 1

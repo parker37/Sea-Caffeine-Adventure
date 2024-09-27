@@ -45,7 +45,14 @@ var dialogue_line: DialogueLine:
 		character_label.text = tr(dialogue_line.character, "dialogue")
 		
 		#set portrait
-		var portrait_path : String = "res://assets/fish/%s.png" % dialogue_line.character.to_lower().replace(" ", "")
+		var folder : String
+		var dialogue_name : String = dialogue_line.character.to_lower().replace(" ", "")
+		if dialogue_name in ["pearl", "charles", "riptide", "toughguy", "shark1", "shark2", "earl", "cresta"]:
+			folder = "characters"
+		else:
+			folder = "icons"
+			
+		var portrait_path : String = "res://assets/%s/%s.png" % [folder, dialogue_name]
 		if FileAccess.file_exists(portrait_path):
 			portrait.texture = load(portrait_path)
 		else:

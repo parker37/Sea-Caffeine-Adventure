@@ -1,3 +1,4 @@
+#region Seaweed
 ~ seaweed
 if inventory.check_for_item("sharktooth"):
 	Seaweed: I cut the seaweed with my shark tooth.
@@ -9,7 +10,9 @@ else:
 	Seaweed: If only there was some way I could obtain this...
 set dialogue_on = false
 => END
+#endregion
 
+#region Sand Dollar
 ~ sanddollar
 if !picked_up_sanddollar:
 	Sand Dollar: Money!
@@ -17,15 +20,20 @@ if !picked_up_sanddollar:
 do inventory.add_item(sanddollar_item)
 set dialogue_on = false
 => END
+#endregion
 
+#region Empty Cup
 ~ emptycup
 Empty Cup: This would probably be good for holding something.
 do inventory.add_item(emptycup_item)
 set dialogue_on = false
 => END
+#endregion
 
+#region Shark Tooth
 ~ sharktooth
 Shark Tooth: This thing is pretty sharp, I should be careful.
 do inventory.add_item(sharktooth_item)
 set dialogue_on = false
 => END
+#endregion
