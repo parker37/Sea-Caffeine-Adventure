@@ -1,10 +1,13 @@
-[gd_scene load_steps=6 format=3 uid="uid://c8gyn745jvvea"]
+[gd_scene load_steps=9 format=3 uid="uid://c8gyn745jvvea"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_8tqeo"]
 [ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_dbtwg"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_e1vi6"]
 [ext_resource type="Resource" uid="uid://vrxusmomh0tv" path="res://assets/pickups/sharktooth.tres" id="4_omcgw"]
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="5_720cg"]
+[ext_resource type="Texture2D" uid="uid://cfp7gcv03mvmv" path="res://assets/characters/shark1.png" id="6_du35q"]
+[ext_resource type="Texture2D" uid="uid://curnh54ym0smg" path="res://assets/characters/shark2.png" id="7_f6qkr"]
+[ext_resource type="Texture2D" uid="uid://nnk64hqtfaa0" path="res://assets/characters/earl.png" id="8_edho6"]
 
 [node name="SharkTank" type="Node2D"]
 
@@ -35,11 +38,14 @@ item = ExtResource("4_omcgw")
 [node name="character" parent="." instance=ExtResource("5_720cg")]
 position = Vector2(284, 249)
 character = "shark"
+plain_sprite = ExtResource("6_du35q")
 
 [node name="character2" parent="." instance=ExtResource("5_720cg")]
 position = Vector2(557, 242)
 character = "shark"
+plain_sprite = ExtResource("7_f6qkr")
 
 [node name="character3" parent="." instance=ExtResource("5_720cg")]
 position = Vector2(829, 250)
 character = "shark"
+plain_sprite = ExtResource("8_edho6")
