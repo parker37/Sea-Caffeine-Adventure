@@ -7,6 +7,20 @@ var is_trashing : bool
 
 var coffee : Array = ["darkcoffee", "milkcoffee", "greencoffee", "seasaltfoam"]
 
+#preload item resources
+var darkcoffee_item = preload("res://assets/pickups/darkcoffee.tres")
+var emptycup_item = preload("res://assets/pickups/emptycup.tres")
+var greencoffee_item = preload("res://assets/pickups/greencoffee.tres")
+var milkbottle_item = preload("res://assets/pickups/milkbottle.tres")
+var milkcoffee_item = preload("res://assets/pickups/milkcoffee.tres")
+var rocksalt_item = preload("res://assets/pickups/rocksalt.tres")
+var sanddollar_item = preload("res://assets/pickups/sanddollar.tres")
+var seasaltfoam_item = preload("res://assets/pickups/seasaltfoam.tres")
+var seaweed_item = preload("res://assets/pickups/seaweed.tres")
+var sharktooth_item = preload("res://assets/pickups/sharktooth.tres")
+var squidinkbottle_item = preload("res://assets/pickups/squidinkbottle.tres")
+
+#enum for item ids
 enum pickup_ids{
 	sanddollar_clam = 0,
 	sanddollar_salt = 1,
@@ -42,6 +56,10 @@ var completed_squid : bool
 var completed_pufferfish : bool
 var completed_clam : bool
 var pearl_first_talk : bool = true
+var talked_to_sharks : bool
+var talked_to_pufferfish : bool
+var talked_to_squid : bool
+var talked_to_whale : bool
 
 func _ready():
 	collected_sanddollars = []

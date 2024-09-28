@@ -1,7 +1,11 @@
 extends Sprite2D
 
 @export var character : String
+@export var plain_sprite : Texture2D
 
+func _ready():
+	texture = plain_sprite
+	
 func _input(event):
 	if (event is InputEventMouseButton 
 	and event.is_pressed()
