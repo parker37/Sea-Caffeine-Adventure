@@ -27,7 +27,6 @@ else if !has_table:
 	
 else if has_table:
 	Pearl: How can I help you today?
-	- Cancel
 	- Make coffee
 		if turned_in_salt:
 			Pearl: Of course. What recipe do you want to make?
@@ -73,6 +72,7 @@ else if has_table:
 			do inventory.remove_item(4)
 		- Slot 6
 			do inventory.remove_item(5)
+	- Cancel
 		
 set dialogue_on = false
 => END
@@ -82,8 +82,8 @@ set dialogue_on = false
 ~ charles
 if start_quest:
 	Charles: Hey! Over here!
-	Charles: I need your help with something. I love coffee and want to sell it down here.
-	Charles: Problem is, I don't have anything that I can run the shop with. I will need ingredients and a place to set up shop.
+	Charles: I need your help with something. Now, the humans have really nailed it with the invention of coffee. And I want some, and I want to introduce it to the other fish around here.
+	Charles: Problem is, I don't have anything that I can run a shop with. I will need ingredients and a place to set up shop.
 	Charles: Think you're up for the job?
 	- I guess...
 	- I would love to help!
@@ -132,7 +132,7 @@ else if has_table and !completed_sharks:
 		set turned_in_milk = true
 		
 	else if inventory.check_for_item("rocksalt"):
-		Charles: Salt? This is interesting. I could foam it up and add it on top. This will add a new flavor with a fun texture. Talk to Pearl to make the new recipe.
+		Charles: Salt? This is interesting. I guess I could foam it up and add it on top. This will add a new flavor with a fun texture. Talk to Pearl to make the new recipe.
 		do inventory.remove_item("rocksalt")
 		set turned_in_salt = true
 		
@@ -154,13 +154,17 @@ set dialogue_on = false
 #region Squid
 ~ squid
 if start_quest:
-	Riptide: What's up dude, you new around here? You don't know the famous Riptide?
+	Riptide: What's up dude, you new around here? You don't know me, the famous Riptide?
 	set dialogue_on = false
 	=> END
-
-if !completed_squid:
+	
+if !start_quest and !talked_to_squid:
 	Riptide: You want my ink? That stuff isn't free buddy.
 	Riptide: Give me 5 sand dollars and its all yours.
+	set talked_to_squid = true
+
+if !completed_squid:
+	Riptide: So, you got the goods?
 	- Here you go
 		if inventory.check_for_item("sanddollar", 5):
 			do inventory.remove_item("sanddollar")
@@ -185,25 +189,30 @@ set dialogue_on = false
 #endregion
 
 #region Pufferfish
+
 ~ pufferfish
 if start_quest:
 	Tough Guy: Beat it, kid.
 	set dialogue_on = false
 	=> END
+	
+if !start_quest and !talked_to_pufferfish:
+	Tough Guy: Oh this stuff behind me? Just some delicious salt. But it's mine. If you want some of it, you're gonna have to go through me.
+	Tough Guy: Oh, coffee, you say? Prove it. Bring some of this so called "coffee". And make it creamy.
+	set talked_to_pufferfish = true
 
 if !completed_pufferfish:
-	Tough Guy: Oh this stuff behind me? Just some delicious salt. But it's mine. If you want some of it, you're gonna have to go through me.
-	Tough Guy: Its for some coffee? Why didn't you just say so? Bring me some delicious creamy coffee and I'll let you have a sample.
-	- I have some right here
+	Tough Guy: You better have something to give me, or else you better get out of here.
+	- I do
 		if inventory.check_for_item("milkcoffee"):
-			Tough Guy: Hm. I didn't think you would pull it off. Regardless, I'm a man of my word. Here you go.
+			Tough Guy: Hm. I didn't think you would pull it off. Take it. Now scram.
 			do inventory.remove_item("milkcoffee")
 			do inventory.add_item(rocksalt_item)
 			set completed_pufferfish = true
 		else:
 			Tough Guy: Don't test me, come back when you have the right stuff.
 	- I'll get on it
-			Tough Guy: You better.
+	
 else:
 	Tough Guy: I've already helped you. Unless you're looking for a fight, I suggest you carry on.
 set dialogue_on = false
@@ -216,8 +225,14 @@ if start_quest:
 	Cresta: Hi darling, I'm Cresta. What a pleasure to meet you.
 	set dialogue_on = false
 	=> END
-if !completed_whale:
+	
+if !start_quest and !talked_to_whale:
+	Cresta: Oh dear, you looked worried. Is there anything I can do to help you?
 	Cresta: You want.. [wait=1]my milk? That's strange. You say its to make coffee? Can you bring me one? And I want it to taste earthy. If you do this, I promise I can give you some milk.
+	set talked_to_whale = true
+	
+if !completed_whale:
+	Cresta: Have you brought the coffee? I'm quite excited.
 	- Try this
 		if inventory.check_for_item("greencoffee"):
 			Cresta: This is perfect, exactly what I asked for. It's even my favorite color.
@@ -238,18 +253,46 @@ set dialogue_on = false
 #region Sharks
 ~ shark
 if start_quest:
-	Shark 1: We're the sharks and if you want something, we get it done.
+	Shark 1: Welcome to the Shark Tank.
 	Shark 2: You tell us your idea, and if we like it, we give you the sand dollars to make it happen.
-	Earl: Come back to talk to us when you have something to say.
+	Earl: Come back when you have something.
 	set dialogue_on = false
 	=> END
-
-if !completed_sharks:
-	Shark 1: You want us to fund your coffee shop?
+	
+if !start_quest and !talked_to_sharks:
+	Shark 1: Welcome to the Shark Tank.
+	Shark 2: You tell us your idea, and if we like it, we give you the sand dollars to make it happen.
+	Earl: You want us to fund your coffee shop?
 	Shark 2: Coffee, in the ocean? It doesn't sound very profitable.
 	Earl: You'll have to bring us some proof that this is a viable business opportunity.
 	Shark 1: Bring us each a coffee of our choice and then we can discuss.
 	- What do you want?
+		Shark 1: I want a coffee with a nice green color.
+		Shark 2: I don't like bitter stuff.
+		Earl: Give me something salty.
+		set talked_to_sharks = true
+		set dialogue_on = false
+		=> END
+	- I have your coffee right here
+		if inventory.check_for_item("greencoffee") and inventory.check_for_item("milkcoffee") and inventory.check_for_item("seasaltfoam"):
+			Shark 1: Thanks!
+			Shark 2: This is tasty.
+			Earl: Fine. You have our financial support. But don't mess this up.
+			set completed_sharks = true
+			do inventory.remove_item("greencoffee")
+			do inventory.remove_item("milkcoffee")
+			do inventory.remove_item("seasaltfoam")
+		else:
+			Shark 2: This isn't what we're looking for.
+			Shark 1: Come back later.
+		set dialogue_on = false
+		=> END
+	- I'll be back later
+	set talked_to_sharks = true
+
+if !completed_sharks:
+	Shark 1: Ready when you are.
+	- What do you want again?
 		Shark 1: I want a coffee with a nice green color.
 		Shark 2: I don't like bitter stuff.
 		Earl: Give me something salty.

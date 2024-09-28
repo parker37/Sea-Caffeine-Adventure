@@ -56,6 +56,10 @@ var completed_squid : bool
 var completed_pufferfish : bool
 var completed_clam : bool
 var pearl_first_talk : bool = true
+var talked_to_sharks : bool
+var talked_to_pufferfish : bool
+var talked_to_squid : bool
+var talked_to_whale : bool
 
 func _ready():
 	collected_sanddollars = []

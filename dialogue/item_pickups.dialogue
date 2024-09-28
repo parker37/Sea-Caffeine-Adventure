@@ -1,11 +1,11 @@
 #region Seaweed
 ~ seaweed
 if inventory.check_for_item("sharktooth"):
-	Seaweed: I cut the seaweed with my shark tooth.
+	Seaweed: That shark tooth worked pretty well, it cut through the seaweed with no problem.
+	do inventory.remove_item("sharktooth")
 	set picked_up_seaweed = true
 	Seaweed: This green color looks very strong. It could probably overpower any color I want.
 	do inventory.add_item(seaweed_item)
-	do inventory.remove_item("sharktooth")
 else:
 	Seaweed: If only there was some way I could obtain this...
 set dialogue_on = false
@@ -15,7 +15,7 @@ set dialogue_on = false
 #region Sand Dollar
 ~ sanddollar
 if !picked_up_sanddollar:
-	Sand Dollar: Money!
+	Sand Dollar: This shell is used a type of currency around here. Not worth a whole lot though.
 	set picked_up_sanddollar = true
 do inventory.add_item(sanddollar_item)
 set dialogue_on = false
