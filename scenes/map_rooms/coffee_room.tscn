@@ -8,7 +8,7 @@
 
 [node name="room" type="Node2D"]
 
-[node name="character" parent="." instance=ExtResource("1_0f10p")]
+[node name="charles" parent="." instance=ExtResource("1_0f10p")]
 position = Vector2(522, 340)
 character = "charles"
 
