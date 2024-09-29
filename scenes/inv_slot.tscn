@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bcl427yisvgnd"]
 
 [ext_resource type="Texture2D" uid="uid://b5uf52keakgcl" path="res://assets/ui/inventory/item_container.png" id="1_asvvb"]
-[ext_resource type="Script" path="res://scenes/inv_slot.gd" id="2_54sw7"]
+[ext_resource type="Script" path="res://scripts/inventory/inv_slot.gd" id="2_54sw7"]
 
 [node name="item_slot" type="TextureRect"]
 anchors_preset = 8

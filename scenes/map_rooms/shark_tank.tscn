@@ -1,0 +1,55 @@
+[gd_scene load_steps=10 format=3 uid="uid://c8gyn745jvvea"]
+
+[ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_8tqeo"]
+[ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_dbtwg"]
+[ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_e1vi6"]
+[ext_resource type="Resource" uid="uid://vrxusmomh0tv" path="res://assets/pickups/sharktooth.tres" id="4_omcgw"]
+[ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="5_720cg"]
+[ext_resource type="AudioStream" uid="uid://rqhc0sm1iumn" path="res://assets/sound/shark_voice.mp3" id="6_3owsu"]
+[ext_resource type="Texture2D" uid="uid://cfp7gcv03mvmv" path="res://assets/characters/shark1.png" id="6_du35q"]
+[ext_resource type="Texture2D" uid="uid://curnh54ym0smg" path="res://assets/characters/shark2.png" id="7_f6qkr"]
+[ext_resource type="Texture2D" uid="uid://nnk64hqtfaa0" path="res://assets/characters/earl.png" id="8_edho6"]
+
+[node name="SharkTank" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("1_8tqeo")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+pivot_offset = Vector2(50, 0)
+
+[node name="to_coffee_room" parent="." instance=ExtResource("2_dbtwg")]
+position = Vector2(40, 363)
+connected_room = "res://scenes/map_rooms/coffee_room.tscn"
+facing = "left"
+
+[node name="pickup" parent="." instance=ExtResource("3_e1vi6")]
+visible = false
+position = Vector2(1051, 553)
+item = ExtResource("4_omcgw")
+
+[node name="character" parent="." instance=ExtResource("5_720cg")]
+position = Vector2(284, 249)
+character = "shark"
+plain_sprite = ExtResource("6_du35q")
+voice = ExtResource("6_3owsu")
+
+[node name="character2" parent="." instance=ExtResource("5_720cg")]
+position = Vector2(557, 242)
+character = "shark"
+plain_sprite = ExtResource("7_f6qkr")
+voice = ExtResource("6_3owsu")
+
+[node name="character3" parent="." instance=ExtResource("5_720cg")]
+position = Vector2(829, 250)
+character = "shark"
+plain_sprite = ExtResource("8_edho6")
+voice = ExtResource("6_3owsu")

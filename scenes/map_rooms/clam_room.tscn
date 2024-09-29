@@ -1,0 +1,50 @@
+[gd_scene load_steps=8 format=3 uid="uid://b518edxjohap5"]
+
+[ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_2bqro"]
+[ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_kcod7"]
+[ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="3_rnw6i"]
+[ext_resource type="Texture2D" uid="uid://dnxllj8hav8fo" path="res://assets/characters/pearl.png" id="4_02hya"]
+[ext_resource type="AudioStream" uid="uid://cbcu14j58anq5" path="res://assets/sound/clam_voice.mp3" id="4_78f6m"]
+[ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_sc48i"]
+[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="5_763mj"]
+
+[node name="ClamRoom" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("1_2bqro")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+pivot_offset = Vector2(50, 0)
+
+[node name="to_salt_room" parent="." instance=ExtResource("2_kcod7")]
+position = Vector2(41, 320)
+connected_room = "res://scenes/map_rooms/salt_room.tscn"
+facing = "left"
+
+[node name="to_seaweed_room" parent="." instance=ExtResource("2_kcod7")]
+position = Vector2(548, 39)
+connected_room = "res://scenes/map_rooms/seaweed_room.tscn"
+facing = "up"
+
+[node name="to_coffee_room" parent="." instance=ExtResource("2_kcod7")]
+position = Vector2(1034, 306)
+connected_room = "res://scenes/map_rooms/coffee_room.tscn"
+facing = "right"
+
+[node name="character" parent="." instance=ExtResource("3_rnw6i")]
+position = Vector2(541, 527)
+character = "clam"
+plain_sprite = ExtResource("4_02hya")
+voice = ExtResource("4_78f6m")
+
+[node name="pickup" parent="." instance=ExtResource("4_sc48i")]
+position = Vector2(91, 578)
+item = ExtResource("5_763mj")

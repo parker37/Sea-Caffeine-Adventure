@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://tuvwybnjktoq"]
+
+[ext_resource type="AudioStream" uid="uid://d3ex5uglt1dec" path="res://assets/sound/bubble_effect.mp3" id="1_61bqq"]
+
+[node name="bubble_sound" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_61bqq")

@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://cgthgq2ewdrwr"]
+
+[ext_resource type="Script" path="res://scripts/start_game.gd" id="1_touuk"]
+[ext_resource type="PackedScene" uid="uid://tuvwybnjktoq" path="res://scenes/bubble_sound.tscn" id="2_ft7fp"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="start_game" type="Button" parent="."]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 256.0
+offset_right = 502.0
+offset_bottom = 287.0
+text = "Start
+"
+script = ExtResource("1_touuk")
+
+[node name="bubble_sound" parent="start_game" instance=ExtResource("2_ft7fp")]
+
+[connection signal="pressed" from="start_game" to="start_game" method="_on_pressed"]
+[connection signal="finished" from="start_game/bubble_sound" to="start_game" method="_on_bubble_sound_finished"]

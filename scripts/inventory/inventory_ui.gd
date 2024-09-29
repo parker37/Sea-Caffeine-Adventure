@@ -8,7 +8,7 @@ const inv_slot_square_radius = 34 * 34
 func _input(event: InputEvent) -> void:
 	if(not event is InputEventMouseButton):
 		return
-	if(Global.dialogue_on):
+	if(Global.dialogue_on and !Global.is_trashing):
 		return
 		
 	if(event.is_action_pressed("Click")):
@@ -23,6 +23,7 @@ func _input(event: InputEvent) -> void:
 func _ready():
 	inventory = Global.inventory
 	inventory.update_inv_ui.connect(update_display)
+	update_display()
 
 func unhighlight_slot():
 	inv_slots[inventory.selectedIndex].toggle_highlight()
@@ -38,6 +39,9 @@ func highlight_slot(slot_index: int, unghighlight_selected: bool):
 		inv_slots[inventory.selectedIndex].toggle_highlight()
 	else:
 		inventory.selected = true
+	
+	if Global.is_trashing:
+		inventory.item_to_trash = slot_index
 		
 	inv_slots[slot_index].toggle_highlight()
 	inventory.selectedIndex = slot_index

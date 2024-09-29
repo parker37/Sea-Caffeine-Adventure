@@ -1,0 +1,51 @@
+[gd_scene load_steps=7 format=3 uid="uid://cdusofxyfpgmb"]
+
+[ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="1_0f10p"]
+[ext_resource type="AudioStream" uid="uid://cii0abk5hu7lo" path="res://assets/sound/charles_voice.mp3" id="2_cnq4u"]
+[ext_resource type="Texture2D" uid="uid://b2gg8qqwrq300" path="res://assets/characters/clam-open.png" id="2_01nu8"]
+[ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="2_s8kgm"]
+[ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="3_20cjx"]
+[ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_s01ku"]
+[ext_resource type="Resource" uid="uid://dcdpij8q23w40" path="res://assets/pickups/emptycup.tres" id="5_1adyy"]
+
+[node name="room" type="Node2D"]
+
+[node name="charles" parent="." instance=ExtResource("1_0f10p")]
+position = Vector2(522, 340)
+character = "charles"
+voice = ExtResource("2_cnq4u")
+plain_sprite = ExtResource("2_01nu8")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+anchor_mode = 0
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("2_s8kgm")]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -40.0
+offset_bottom = 40.0
+grow_horizontal = 0
+pivot_offset = Vector2(50, 0)
+metadata/_edit_use_anchors_ = true
+
+[node name="to_clam_room" parent="." instance=ExtResource("3_20cjx")]
+position = Vector2(38, 324)
+connected_room = "res://scenes/map_rooms/clam_room.tscn"
+facing = "left"
+
+[node name="to_squid_room" parent="." instance=ExtResource("3_20cjx")]
+position = Vector2(532, 38)
+connected_room = "res://scenes/map_rooms/squid_room.tscn"
+facing = "up"
+
+[node name="to_shark_tank" parent="." instance=ExtResource("3_20cjx")]
+position = Vector2(1045, 323)
+connected_room = "res://scenes/map_rooms/shark_tank.tscn"
+facing = "right"
+
+[node name="pickup" parent="." instance=ExtResource("4_s01ku")]
+position = Vector2(944, 587)
+item = ExtResource("5_1adyy")

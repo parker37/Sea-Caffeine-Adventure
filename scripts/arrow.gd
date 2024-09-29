@@ -15,7 +15,7 @@ func _ready():
 			set_frame(3)
 
 func _input(event):
-	if (event is InputEventMouseButton and event.is_released()):
+	if (event is InputEventMouseButton and event.is_pressed() and !Global.dialogue_on):
 		if get_rect().has_point(to_local(event.position)):
 			#go to next room
 			get_tree().change_scene_to_file(connected_room)

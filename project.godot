@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="SeaAdventure"
-run/main_scene="res://scenes/room.tscn"
+run/main_scene="res://scenes/main_menu.tscn"
 config/features=PackedStringArray("4.3", "Mobile")
 config/icon="res://assets/icon.svg"
 
@@ -19,6 +19,8 @@ config/icon="res://assets/icon.svg"
 
 DialogueManager="*res://addons/dialogue_manager/dialogue_manager.gd"
 Global="*res://global.gd"
+GlobalMsuic="*res://scenes/global_music.tscn"
+BubbleSound="*res://scenes/bubble_sound.tscn"
 
 [dialogue_manager]
 
@@ -53,7 +55,7 @@ Right-Click={
 
 [internationalization]
 
-locale/translations_pot_files=PackedStringArray("res://dialogue/test_dialogue.dialogue", "res://dialogue/item_pickups.dialogue")
+locale/translations_pot_files=PackedStringArray("res://dialogue/item_pickups.dialogue", "res://dialogue/character_dialogue.dialogue")
 
 [rendering]
 

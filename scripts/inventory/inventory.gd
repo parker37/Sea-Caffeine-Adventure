@@ -7,6 +7,8 @@ class_name Inventory
 @export var selectedIndex: int = 0
 var inventory_slots: int = 6
 
+var item_to_trash : int = -1
+
 signal update_inv_ui
 
 func _init() -> void:
@@ -16,6 +18,7 @@ func add_item(new_item: InvItem):
 	for i: int in range(inventory_slots):
 		if (!items[i]):
 			items[i] = new_item
+			BubbleSound.play()
 			update_inv_ui.emit()
 			break
 		pass
@@ -24,6 +27,9 @@ func remove_item(query: Variant):
 	# Checks if query is an int, which is used as slot index
 	match typeof(query):
 		TYPE_INT:
+			if Global.is_trashing and items[query] != null:
+				if items[query].name not in Global.coffee:
+					return
 			items[query] = null
 			update_inv_ui.emit()
 			

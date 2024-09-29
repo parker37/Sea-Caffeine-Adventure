@@ -1,8 +1,11 @@
 [gd_scene load_steps=3 format=3 uid="uid://cht2oa5f8lyqq"]
 
-[ext_resource type="Texture2D" uid="uid://dkj8hlc2vptwd" path="res://assets/icon.svg" id="1_6xdhf"]
 [ext_resource type="Script" path="res://scripts/character.gd" id="2_oodb0"]
+[ext_resource type="Texture2D" uid="uid://nnk64hqtfaa0" path="res://assets/characters/earl.png" id="3_k3s4g"]
 
 [node name="character" type="Sprite2D"]
-texture = ExtResource("1_6xdhf")
+scale = Vector2(4, 4)
+texture = ExtResource("3_k3s4g")
 script = ExtResource("2_oodb0")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
