@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqxa67eqclpi4"]
+
+[ext_resource type="AudioStream" uid="uid://brusre245gsuw" path="res://assets/sound/Underwater.mp3" id="1_y47rh"]
+
+[sub_resource type="GDScript" id="GDScript_6fltq"]
+script/source = "extends AudioStreamPlayer2D
+
+
+# Called when the node enters the scene tree for the first time.
+func _ready() -> void:
+	pass # Replace with function body.
+
+
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta: float) -> void:
+	pass
+"
+
+[node name="global_music" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_y47rh")
+autoplay = true
+script = SubResource("GDScript_6fltq")

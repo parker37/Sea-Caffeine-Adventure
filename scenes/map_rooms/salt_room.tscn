@@ -5,7 +5,9 @@
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_mv7dp"]
 [ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="4_7jf3r"]
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="5_88dtr"]
+[ext_resource type="AudioStream" uid="uid://cfvax4w3q8u8" path="res://assets/sound/pufferfish_voice.mp3" id="6_jx4oq"]
 [ext_resource type="Texture2D" uid="uid://b2gg8qqwrq300" path="res://assets/characters/clam-open.png" id="6_kjnao"]
+
 
 [node name="SaltRoom" type="Node2D"]
 
@@ -41,4 +43,6 @@ ID = 1
 [node name="character" parent="." instance=ExtResource("5_88dtr")]
 position = Vector2(265, 326)
 character = "pufferfish"
+voice = ExtResource("6_jx4oq")
 plain_sprite = ExtResource("6_kjnao")
+

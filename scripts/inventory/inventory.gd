@@ -18,6 +18,7 @@ func add_item(new_item: InvItem):
 	for i: int in range(inventory_slots):
 		if (!items[i]):
 			items[i] = new_item
+			BubbleSound.play()
 			update_inv_ui.emit()
 			break
 		pass

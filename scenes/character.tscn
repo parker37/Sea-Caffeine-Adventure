@@ -7,3 +7,5 @@
 scale = Vector2(4, 4)
 texture = ExtResource("3_k3s4g")
 script = ExtResource("2_oodb0")
+
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
