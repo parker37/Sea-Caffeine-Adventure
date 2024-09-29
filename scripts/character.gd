@@ -1,6 +1,7 @@
 extends Sprite2D
 
 @export var character : String
+
 @export var voice : AudioStreamMP3
 var audiostream
 
@@ -8,6 +9,12 @@ func _ready() :
 	audiostream = get_node("AudioStreamPlayer2D")
 	audiostream.stream = voice
 
+@export var plain_sprite : Texture2D
+
+
+func _ready():
+	texture = plain_sprite
+	
 func _input(event):
 	if (event is InputEventMouseButton 
 	and event.is_pressed()

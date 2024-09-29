@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://crxmperrhgaq5"]
+[gd_scene load_steps=7 format=3 uid="uid://crxmperrhgaq5"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_synjt"]
 [ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_dqasq"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_3quwr"]
 [ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="4_va6y0"]
+[ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="5_os620"]
+[ext_resource type="Texture2D" uid="uid://b2gg8qqwrq300" path="res://assets/characters/clam-open.png" id="6_l51xa"]
 
 [node name="WhaleRoom" type="Node2D"]
 
@@ -35,3 +37,8 @@ facing = "right"
 position = Vector2(377, 534)
 item = ExtResource("4_va6y0")
 ID = 4
+
+[node name="character" parent="." instance=ExtResource("5_os620")]
+position = Vector2(541, 192)
+character = "whale"
+plain_sprite = ExtResource("6_l51xa")

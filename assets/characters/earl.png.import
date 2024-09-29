@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dnxllj8hav8fo"
-path="res://.godot/imported/clam-closed2.png-563c140a79ad0734d6829c17fd5ab7f2.ctex"
+uid="uid://nnk64hqtfaa0"
+path="res://.godot/imported/earl.png-05efbdb5e5cf69d988e79970e78b701e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/clam-closed2.png"
-dest_files=["res://.godot/imported/clam-closed2.png-563c140a79ad0734d6829c17fd5ab7f2.ctex"]
+source_file="res://assets/characters/earl.png"
+dest_files=["res://.godot/imported/earl.png-05efbdb5e5cf69d988e79970e78b701e.ctex"]
 
 [params]
 

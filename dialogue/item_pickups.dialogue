@@ -1,30 +1,39 @@
+#region Seaweed
 ~ seaweed
 if inventory.check_for_item("sharktooth"):
+	Seaweed: That shark tooth worked pretty well, it cut through the seaweed with no problem.
+	do inventory.remove_item("sharktooth")
 	set picked_up_seaweed = true
 	Seaweed: This green color looks very strong. It could probably overpower any color I want.
-	do inventory.add_item(load("res://assets/pickups/seaweed.tres"))
-	do inventory.remove_item("sharktooth")
+	do inventory.add_item(seaweed_item)
 else:
 	Seaweed: If only there was some way I could obtain this...
 set dialogue_on = false
 => END
+#endregion
 
+#region Sand Dollar
 ~ sanddollar
 if !picked_up_sanddollar:
-	Sand Dollar: Money!
+	Sand Dollar: This shell is used a type of currency around here. Not worth a whole lot though.
 	set picked_up_sanddollar = true
-do inventory.add_item(load("res://assets/pickups/sanddollar.tres"))
+do inventory.add_item(sanddollar_item)
 set dialogue_on = false
 => END
+#endregion
 
+#region Empty Cup
 ~ emptycup
 Empty Cup: This would probably be good for holding something.
-do inventory.add_item(load("res://assets/pickups/emptycup.tres"))
+do inventory.add_item(emptycup_item)
 set dialogue_on = false
 => END
+#endregion
 
+#region Shark Tooth
 ~ sharktooth
 Shark Tooth: This thing is pretty sharp, I should be careful.
-do inventory.add_item(load("res://assets/pickups/sharktooth.tres"))
+do inventory.add_item(sharktooth_item)
 set dialogue_on = false
 => END
+#endregion
