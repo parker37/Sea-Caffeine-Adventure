@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=3 uid="uid://cdusofxyfpgmb"]
+[gd_scene load_steps=7 format=3 uid="uid://cdusofxyfpgmb"]
 
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="1_0f10p"]
+[ext_resource type="AudioStream" uid="uid://cii0abk5hu7lo" path="res://assets/sound/charles_voice.mp3" id="2_cnq4u"]
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="2_s8kgm"]
 [ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="3_20cjx"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_s01ku"]
@@ -11,6 +12,7 @@
 [node name="charles" parent="." instance=ExtResource("1_0f10p")]
 position = Vector2(522, 340)
 character = "charles"
+voice = ExtResource("2_cnq4u")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 anchor_mode = 0
