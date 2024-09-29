@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://bmdwdrgugbcbc"]
+[gd_scene load_steps=8 format=3 uid="uid://bmdwdrgugbcbc"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_xmg6k"]
 [ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_dky61"]
@@ -7,7 +7,6 @@
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="5_88dtr"]
 [ext_resource type="AudioStream" uid="uid://cfvax4w3q8u8" path="res://assets/sound/pufferfish_voice.mp3" id="6_jx4oq"]
 [ext_resource type="Texture2D" uid="uid://b2gg8qqwrq300" path="res://assets/characters/clam-open.png" id="6_kjnao"]
-
 
 [node name="SaltRoom" type="Node2D"]
 
@@ -43,6 +42,5 @@ ID = 1
 [node name="character" parent="." instance=ExtResource("5_88dtr")]
 position = Vector2(265, 326)
 character = "pufferfish"
-voice = ExtResource("6_jx4oq")
 plain_sprite = ExtResource("6_kjnao")
-
+voice = ExtResource("6_jx4oq")

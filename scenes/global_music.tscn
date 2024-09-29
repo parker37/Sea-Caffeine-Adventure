@@ -18,5 +18,6 @@ func _process(delta: float) -> void:
 
 [node name="global_music" type="AudioStreamPlayer2D"]
 stream = ExtResource("1_y47rh")
+volume_db = -8.0
 autoplay = true
 script = SubResource("GDScript_6fltq")

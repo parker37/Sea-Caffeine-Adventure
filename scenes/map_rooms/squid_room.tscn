@@ -1,4 +1,4 @@
-[gd_scene load_steps=7 format=3 uid="uid://s2b8pbkr6upl"]
+[gd_scene load_steps=8 format=3 uid="uid://s2b8pbkr6upl"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_nfgfb"]
 [ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_8eshw"]
@@ -37,8 +37,8 @@ facing = "down"
 [node name="character" parent="." instance=ExtResource("3_4fycx")]
 position = Vector2(800, 155)
 character = "squid"
-voice = ExtResource("4_17y2q")
 plain_sprite = ExtResource("4_bdbbd")
+voice = ExtResource("4_17y2q")
 
 [node name="pickup" parent="." instance=ExtResource("4_ukvg1")]
 position = Vector2(305, 501)
