@@ -1,13 +1,26 @@
 extends Sprite2D
 
 @export var character : String
-@export var plain_sprite : Texture2D
 @export var voice : AudioStreamMP3
 var audiostream
+
+var plain : String
+var highlight : String
+var plain_sprite : Texture2D
+var highlight_sprite : Texture2D
 
 func _ready() : 
 	audiostream = get_node("AudioStreamPlayer2D")
 	audiostream.stream = voice
+	
+	if character == "clam" and Global.completed_clam:
+		character = "clam_open"
+	
+	plain = "res://assets/characters/%s.png" % character
+	highlight = "res://assets/characters/%s_highlight.png" % character
+	plain_sprite = load(plain)
+	highlight_sprite = load(highlight)
+	
 	texture = plain_sprite
 	
 func _input(event):

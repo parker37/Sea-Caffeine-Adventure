@@ -1,10 +1,21 @@
-[gd_scene load_steps=3 format=3 uid="uid://cjwedkvj6kvqa"]
+[gd_scene load_steps=5 format=3 uid="uid://cjwedkvj6kvqa"]
 
-[ext_resource type="Texture2D" uid="uid://bibwvket35pwa" path="res://assets/arrowSpriteSheet.png" id="1_1u2rh"]
+[ext_resource type="Texture2D" uid="uid://dj1r41bx4d2du" path="res://assets/arrows_sheet.png" id="1_8eygn"]
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="2_0kmm1"]
+[ext_resource type="Script" path="res://scenes/highlight_arrow.gd" id="3_7r484"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ivebh"]
+size = Vector2(21, 18)
 
 [node name="next_room" type="Sprite2D"]
 scale = Vector2(2, 2)
-texture = ExtResource("1_1u2rh")
+texture = ExtResource("1_8eygn")
 hframes = 4
 script = ExtResource("2_0kmm1")
+
+[node name="Area2D" type="Area2D" parent="."]
+script = ExtResource("3_7r484")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-0.5, 0)
+shape = SubResource("RectangleShape2D_ivebh")

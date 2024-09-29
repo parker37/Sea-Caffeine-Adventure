@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://d0bt65wgoypwr"]
+
+[ext_resource type="AudioStream" uid="uid://b2rwcn5y8sxk0" path="res://assets/sound/swish_effect.mp3" id="1_p3bw0"]
+
+[node name="swish_effect" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_p3bw0")
+volume_db = -8.432
