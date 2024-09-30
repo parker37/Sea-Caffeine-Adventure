@@ -1,6 +1,7 @@
-[gd_scene load_steps=33 format=4 uid="uid://bnkf1ywx5w2vr"]
+[gd_scene load_steps=34 format=4 uid="uid://bnkf1ywx5w2vr"]
 
 [ext_resource type="TileSet" uid="uid://1juse7wq1ch6" path="res://assets/environment_tileset.tres" id="1_ehg11"]
+[ext_resource type="Script" path="res://scenes/map_rooms/win_room.gd" id="1_i2vdv"]
 [ext_resource type="Texture2D" uid="uid://cfwipv21owmek" path="res://assets/characters/squid.png" id="2_1vibl"]
 [ext_resource type="Texture2D" uid="uid://nnk64hqtfaa0" path="res://assets/characters/earl.png" id="2_itejs"]
 [ext_resource type="Texture2D" uid="uid://cfp7gcv03mvmv" path="res://assets/characters/shark1.png" id="2_qgr7f"]
@@ -435,6 +436,7 @@ _data = {
 
 [node name="WinRoom" type="Node2D"]
 position = Vector2(-30, -1)
+script = ExtResource("1_i2vdv")
 
 [node name="clam_anim" type="AnimationPlayer" parent="."]
 root_node = NodePath("../squid_anim")
@@ -566,3 +568,5 @@ theme_override_font_sizes/font_size = 56
 text = "Thanks for 
 playing <3"
 horizontal_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
