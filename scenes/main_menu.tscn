@@ -1,7 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgthgq2ewdrwr"]
+[gd_scene load_steps=3 format=3 uid="uid://bf7ixmilfdtox"]
 
 [ext_resource type="Script" path="res://scripts/start_game.gd" id="1_touuk"]
-[ext_resource type="PackedScene" uid="uid://tuvwybnjktoq" path="res://scenes/bubble_sound.tscn" id="2_ft7fp"]
+[ext_resource type="PackedScene" path="res://scenes/bubble_sound.tscn" id="2_ft7fp"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
