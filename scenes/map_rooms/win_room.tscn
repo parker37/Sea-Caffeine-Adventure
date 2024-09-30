@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://cfwipv21owmek" path="res://assets/characters/squid.png" id="2_1vibl"]
 [ext_resource type="Texture2D" uid="uid://cggdol3nm2al1" path="res://assets/characters/pufferfish_deflated.png" id="3_5tbw1"]
 [ext_resource type="Texture2D" uid="uid://dck1iwqx0bv16" path="res://assets/characters/shark2.png" id="4_ysq5y"]
-[ext_resource type="Texture2D" uid="uid://dnxllj8hav8fo" path="res://assets/characters/clam.png" id="5_kw7iw"]
+[ext_resource type="Texture2D" uid="uid://di8dil3rfb4yd" path="res://assets/characters/clam.png" id="5_kw7iw"]
 [ext_resource type="Texture2D" uid="uid://cw4a3sy8je0n5" path="res://assets/characters/charles.png" id="6_tu0jn"]
 
 [sub_resource type="Animation" id="Animation_lx07b"]

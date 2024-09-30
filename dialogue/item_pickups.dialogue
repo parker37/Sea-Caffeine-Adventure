@@ -1,6 +1,9 @@
 #region Seaweed
 ~ seaweed
-if inventory.check_for_item("sharktooth"):
+if inventory_hint:
+	Seaweed: This green color looks very strong. It could probably overpower any color I want.
+	set inventory_hint = false
+elif inventory.check_for_item("sharktooth"):
 	set picked_up_seaweed = true
 	Seaweed: That shark tooth worked pretty well, it cut through the seaweed with no problem.
 	do inventory.remove_item("sharktooth")
@@ -14,7 +17,10 @@ set dialogue_on = false
 
 #region Sand Dollar
 ~ sanddollar
-if !picked_up_sanddollar:
+if inventory_hint:
+	Sand Dollar: This shell is used as a type of currency around here. Not worth a whole lot though.
+	set inventory_hint = false
+elif !picked_up_sanddollar:
 	Sand Dollar: This shell is used as a type of currency around here. Not worth a whole lot though.
 	set picked_up_sanddollar = true
 do inventory.add_item(sanddollar_item)
@@ -25,15 +31,47 @@ set dialogue_on = false
 #region Empty Cup
 ~ emptycup
 Empty Cup: This would probably be good for holding something.
-do inventory.add_item(emptycup_item)
+if !inventory_hint:
+	do inventory.add_item(emptycup_item)
 set dialogue_on = false
+set inventory_hint = false
 => END
 #endregion
 
 #region Shark Tooth
 ~ sharktooth
 Shark Tooth: This thing is pretty sharp, I should be careful.
-do inventory.add_item(sharktooth_item)
+if !inventory_hint:
+	do inventory.add_item(sharktooth_item)
 set dialogue_on = false
+set inventory_hint = false
 => END
 #endregion
+
+#region Dark Coffee
+~ darkcoffee
+Dark Coffee: A simple cup of coffee.
+set dialogue_on = false
+set inventory_hint = false
+=> END
+
+#region Green Coffee
+~ greencoffee
+Green Coffee: A refreshing earthy cup of coffee.
+set dialogue_on = false
+set inventory_hint = false
+=> END
+
+#region Milk Coffee
+~ milkcoffee
+Milk Coffee: A warm and creamy cup of coffee.
+set dialogue_on = false
+set inventory_hint = false
+=> END
+
+#region Sea Salt Foam
+~ seasaltfoam
+Sea Salt Foam Coffee: A sweet and salty cup of coffee.
+set dialogue_on = false
+set inventory_hint = false
+=> END

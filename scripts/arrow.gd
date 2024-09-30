@@ -17,6 +17,10 @@ func _ready():
 func _input(event):
 	if (event is InputEventMouseButton and event.is_pressed() and !Global.dialogue_on):
 		if get_rect().has_point(to_local(event.position)):
-			#go to next room
-			SwishEffect.play()
-			get_tree().change_scene_to_file(connected_room)
+			if Global.completed_sharks:
+				%AnimationPlayer.play("fade_out")
+			else:
+				#go to next room
+				SwishEffect.play()
+				Global.completed_sharks = true
+				get_tree().change_scene_to_file(connected_room)

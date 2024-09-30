@@ -1,7 +1,7 @@
 [gd_scene load_steps=27 format=4 uid="uid://cgthgq2ewdrwr"]
 
 [ext_resource type="Script" path="res://scripts/start_game.gd" id="1_touuk"]
-[ext_resource type="PackedScene" uid="uid://tuvwybnjktoq" path="res://scenes/bubble_sound.tscn" id="2_ft7fp"]
+[ext_resource type="PackedScene" path="res://scenes/bubble_sound.tscn" id="2_ft7fp"]
 [ext_resource type="PackedScene" uid="uid://dpxl0ch2ejcn" path="res://scenes/bubble_particles.tscn" id="2_ydp4s"]
 [ext_resource type="Texture2D" uid="uid://dj30vywjgmkn0" path="res://assets/ui/bubblepop.png" id="3_3ry6v"]
 [ext_resource type="FontFile" uid="uid://dg52r7e1fkrl4" path="res://FatPix-SVG.ttf" id="3_bw1kw"]

@@ -45,6 +45,11 @@ func highlight_slot(slot_index: int, unghighlight_selected: bool):
 		
 	inv_slots[slot_index].toggle_highlight()
 	inventory.selectedIndex = slot_index
+	
+	if(inventory.items[slot_index]):
+		Global.dialogue_on = true
+		Global.inventory_hint = true
+		DialogueManager.show_example_dialogue_balloon(load("res://dialogue/item_pickups.dialogue"), inventory.items[slot_index].name)
 		
 # Updates when item is added or removed
 func update_display():

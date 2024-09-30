@@ -60,6 +60,7 @@ else if has_table:
 			- Dark Coffee
 				do inventory.add_item(darkcoffee_item)
 			- Cancel
+		
 	- Trash coffee
 		set is_trashing = true
 		Pearl: Which coffee would you like to trash?
@@ -170,7 +171,7 @@ if !start_quest and !talked_to_squid:
 	Riptide: I could offer you some, but it's gonna cost yuh.
 	Riptide: Give me 5 sand dollars and its all yours.
 	set talked_to_squid = true
-elif !start_quest:
+elif !start_quest and !completed_squid:
 	Riptide: You want my ink? That stuff isn't free buddy.
 	Riptide: Give me 5 sand dollars and its all yours.
 
@@ -273,7 +274,7 @@ set dialogue_on = false
 if start_quest:
 	Shark 1: Welcome to the Shark Tank.
 	Shark 2: You tell us your idea, and if we like it, we give you the sand dollars to make it happen.
-	Earl: Come back when you have something.
+	Earl: Come back when you have something to pitch.
 	set dialogue_on = false
 	=> END
 	
@@ -326,6 +327,7 @@ if !completed_sharks:
 			do inventory.remove_item("greencoffee")
 			do inventory.remove_item("milkcoffee")
 			do inventory.remove_item("seasaltfoam")
+			
 		else:
 			Shark 2: This isn't everything we're looking for.
 			Shark 1: Come back later.

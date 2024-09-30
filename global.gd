@@ -3,6 +3,7 @@ extends Node
 @export var inventory: Inventory
 var dialogue_on = false
 
+var inventory_hint: bool = false
 var is_trashing : bool
 
 var coffee : Array = ["darkcoffee", "milkcoffee", "greencoffee", "seasaltfoam"]
@@ -64,3 +65,4 @@ var talked_to_whale : bool
 func _ready():
 	collected_sanddollars = []
 	inventory = Inventory.new()
+	

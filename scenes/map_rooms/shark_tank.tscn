@@ -1,10 +1,11 @@
-[gd_scene load_steps=9 format=4 uid="uid://c8gyn745jvvea"]
+[gd_scene load_steps=10 format=4 uid="uid://c8gyn745jvvea"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_8tqeo"]
 [ext_resource type="TileSet" uid="uid://1juse7wq1ch6" path="res://assets/environment_tileset.tres" id="1_h4eu3"]
 [ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_dbtwg"]
+[ext_resource type="PackedScene" uid="uid://bp1y2lhso51uk" path="res://scenes/animation_player.tscn" id="3_74o8r"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_e1vi6"]
-[ext_resource type="Resource" uid="uid://vrxusmomh0tv" path="res://assets/pickups/sharktooth.tres" id="4_omcgw"]
+[ext_resource type="Resource" path="res://assets/pickups/sharktooth.tres" id="4_omcgw"]
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="5_720cg"]
 [ext_resource type="AudioStream" uid="uid://rqhc0sm1iumn" path="res://assets/sound/shark_voice.mp3" id="6_3owsu"]
 [ext_resource type="PackedScene" uid="uid://nx1tqcroy1tq" path="res://scenes/environment_extras.tscn" id="8_c4bo5"]
@@ -35,6 +36,7 @@ tile_set = ExtResource("1_h4eu3")
 anchor_mode = 0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
 
 [node name="Inventory_UI" parent="CanvasLayer" instance=ExtResource("1_8tqeo")]
 anchors_preset = 1
@@ -44,6 +46,9 @@ offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
 pivot_offset = Vector2(50, 0)
+
+[node name="AnimationPlayer" parent="CanvasLayer" instance=ExtResource("3_74o8r")]
+unique_name_in_owner = true
 
 [node name="to_coffee_room" parent="." instance=ExtResource("2_dbtwg")]
 position = Vector2(51, 504)
