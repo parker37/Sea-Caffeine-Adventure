@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=4 uid="uid://b518edxjohap5"]
+[gd_scene load_steps=9 format=4 uid="uid://b518edxjohap5"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_2bqro"]
 [ext_resource type="TileSet" uid="uid://1juse7wq1ch6" path="res://assets/environment_tileset.tres" id="1_fuq00"]
@@ -7,6 +7,7 @@
 [ext_resource type="AudioStream" uid="uid://cbcu14j58anq5" path="res://assets/sound/clam_voice.mp3" id="4_78f6m"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_sc48i"]
 [ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="5_763mj"]
+[ext_resource type="PackedScene" uid="uid://nx1tqcroy1tq" path="res://scenes/environment_extras.tscn" id="8_nhybd"]
 
 [node name="ClamRoom" type="Node2D"]
 
@@ -62,3 +63,57 @@ voice = ExtResource("4_78f6m")
 [node name="pickup" parent="." instance=ExtResource("4_sc48i")]
 position = Vector2(237, 511)
 item = ExtResource("5_763mj")
+
+[node name="DECORATIONS" type="Node2D" parent="."]
+
+[node name="environment_extras" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(927, 394)
+scale = Vector2(5, 5)
+frame = 8
+
+[node name="environment_extras2" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(307, 470)
+frame = 1
+
+[node name="environment_extras3" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(829, 517)
+rotation = 2.57841
+frame = 1
+
+[node name="environment_extras4" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(1028, 462)
+rotation = 2.00931
+frame = 1
+
+[node name="environment_extras5" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(386, 450)
+frame = 4
+
+[node name="environment_extras6" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(796, 446)
+frame = 4
+
+[node name="environment_extras7" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(669, 494)
+rotation = -0.398529
+scale = Vector2(-2, 2)
+frame = 4
+
+[node name="environment_extras8" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(452, 521)
+rotation = 0.127141
+frame = 4
+
+[node name="environment_extras9" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(199, 450)
+rotation = -0.121834
+scale = Vector2(-2, 2)
+frame = 4
+
+[node name="environment_extras10" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(694, 414)
+scale = Vector2(3, 3)
+
+[node name="environment_extras11" parent="DECORATIONS" instance=ExtResource("8_nhybd")]
+position = Vector2(363, 486)
+scale = Vector2(-3, 3)

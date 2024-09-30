@@ -1,7 +1,85 @@
-[gd_scene load_steps=3 format=3 uid="uid://cgthgq2ewdrwr"]
+[gd_scene load_steps=27 format=4 uid="uid://cgthgq2ewdrwr"]
 
 [ext_resource type="Script" path="res://scripts/start_game.gd" id="1_touuk"]
 [ext_resource type="PackedScene" uid="uid://tuvwybnjktoq" path="res://scenes/bubble_sound.tscn" id="2_ft7fp"]
+[ext_resource type="PackedScene" uid="uid://dpxl0ch2ejcn" path="res://scenes/bubble_particles.tscn" id="2_ydp4s"]
+[ext_resource type="Texture2D" uid="uid://dj30vywjgmkn0" path="res://assets/ui/bubblepop.png" id="3_3ry6v"]
+[ext_resource type="FontFile" uid="uid://dg52r7e1fkrl4" path="res://FatPix-SVG.ttf" id="3_bw1kw"]
+[ext_resource type="TileSet" uid="uid://1juse7wq1ch6" path="res://assets/environment_tileset.tres" id="4_0t8eg"]
+[ext_resource type="Texture2D" uid="uid://dnje57k10rnwy" path="res://assets/ui/title.png" id="5_et5df"]
+[ext_resource type="PackedScene" uid="uid://nx1tqcroy1tq" path="res://scenes/environment_extras.tscn" id="8_kadha"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_krp71"]
+atlas = ExtResource("3_3ry6v")
+region = Rect2(0, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mk3qe"]
+atlas = ExtResource("3_3ry6v")
+region = Rect2(32, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x0j66"]
+atlas = ExtResource("3_3ry6v")
+region = Rect2(64, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5w5hx"]
+atlas = ExtResource("3_3ry6v")
+region = Rect2(96, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n6c7g"]
+atlas = ExtResource("3_3ry6v")
+region = Rect2(128, 0, 32, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2igmb"]
+atlas = ExtResource("3_3ry6v")
+region = Rect2(160, 0, 32, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_bcbnv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_krp71")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mk3qe")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x0j66")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5w5hx")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n6c7g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2igmb")
+}],
+"loop": false,
+"name": &"default",
+"speed": 25.0
+}]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2j5e8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w3fnv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s2hmd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4amce"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ege3s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cj0vp"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2em7e"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8xv60"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tquqd"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_cy2fy"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5laqa"]
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -11,17 +89,116 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 
+[node name="Water" type="TileMapLayer" parent="."]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAAAAAAgAAAAAAAAABAAAAAgAAAAAAAAACAAAAAgAAAAAAAAADAAAAAgAAAAAAAAAEAAAAAgAAAAAAAAAFAAAAAgAAAAAAAAAGAAAAAgAAAAAAAAAHAAAAAgAAAAAAAAAIAAAAAgAAAAAAAAAJAAAAAgAAAAAAAAAKAAAAAgAAAAAAAAALAAAAAgAAAAAAAAAMAAAAAgAAAAAAAAANAAAAAgAAAAAAAAAOAAAAAgAAAAAAAAAPAAAAAgAAAAAAAAAQAAAAAgAAAAAAAAARAAAAAgAAAAAAAAAAAAEAAgAAAAEAAAABAAEAAgAAAAEAAAACAAEAAgAAAAEAAAADAAEAAgAAAAEAAAAEAAEAAgAAAAEAAAAFAAEAAgAAAAEAAAAGAAEAAgAAAAEAAAAHAAEAAgAAAAEAAAAIAAEAAgAAAAEAAAAJAAEAAgAAAAEAAAAKAAEAAgAAAAEAAAALAAEAAgAAAAEAAAAMAAEAAgAAAAEAAAANAAEAAgAAAAEAAAAOAAEAAgAAAAEAAAAPAAEAAgAAAAEAAAAQAAEAAgAAAAEAAAARAAEAAgAAAAEAAAAAAAIAAgAAAAIAAAABAAIAAgAAAAIAAAACAAIAAgAAAAIAAAADAAIAAgAAAAIAAAAEAAIAAgAAAAIAAAAFAAIAAgAAAAIAAAAGAAIAAgAAAAIAAAAHAAIAAgAAAAIAAAAIAAIAAgAAAAIAAAAJAAIAAgAAAAIAAAAKAAIAAgAAAAIAAAALAAIAAgAAAAIAAAAMAAIAAgAAAAIAAAANAAIAAgAAAAIAAAAOAAIAAgAAAAIAAAAPAAIAAgAAAAIAAAAQAAIAAgAAAAIAAAARAAIAAgAAAAIAAAAAAAMAAgAAAAMAAAABAAMAAgAAAAMAAAACAAMAAgAAAAMAAAADAAMAAgAAAAMAAAAEAAMAAgAAAAMAAAAFAAMAAgAAAAMAAAAGAAMAAgAAAAMAAAAHAAMAAgAAAAMAAAAIAAMAAgAAAAMAAAAJAAMAAgAAAAMAAAAKAAMAAgAAAAMAAAALAAMAAgAAAAMAAAAMAAMAAgAAAAMAAAANAAMAAgAAAAMAAAAOAAMAAgAAAAMAAAAPAAMAAgAAAAMAAAAQAAMAAgAAAAMAAAARAAMAAgAAAAMAAAAAAAQAAgAAAAQAAAABAAQAAgAAAAQAAAACAAQAAgAAAAQAAAADAAQAAgAAAAQAAAAEAAQAAgAAAAQAAAAFAAQAAgAAAAQAAAAGAAQAAgAAAAQAAAAHAAQAAgAAAAQAAAAIAAQAAgAAAAQAAAAJAAQAAgAAAAQAAAAKAAQAAgAAAAQAAAALAAQAAgAAAAQAAAAMAAQAAgAAAAQAAAANAAQAAgAAAAQAAAAOAAQAAgAAAAQAAAAPAAQAAgAAAAQAAAAQAAQAAgAAAAQAAAARAAQAAgAAAAQAAAAAAAUAAgAAAAUAAAAAAAYAAgAAAAUAAAAAAAcAAgAAAAUAAAAAAAgAAgAAAAUAAAABAAgAAgAAAAUAAAABAAcAAgAAAAUAAAABAAYAAgAAAAUAAAABAAUAAgAAAAUAAAACAAUAAgAAAAUAAAADAAUAAgAAAAUAAAADAAYAAgAAAAUAAAACAAYAAgAAAAUAAAACAAcAAgAAAAUAAAADAAcAAgAAAAUAAAADAAgAAgAAAAUAAAAEAAYAAgAAAAUAAAAEAAUAAgAAAAUAAAAFAAUAAgAAAAUAAAAGAAUAAgAAAAUAAAAHAAUAAgAAAAUAAAAIAAUAAgAAAAUAAAAJAAUAAgAAAAUAAAAKAAUAAgAAAAUAAAALAAUAAgAAAAUAAAAMAAUAAgAAAAUAAAANAAUAAgAAAAUAAAAOAAUAAgAAAAUAAAAPAAUAAgAAAAUAAAAQAAUAAgAAAAUAAAARAAUAAgAAAAUAAAARAAYAAgAAAAUAAAARAAcAAgAAAAUAAAARAAgAAgAAAAUAAAAQAAgAAgAAAAUAAAAQAAcAAgAAAAUAAAAPAAcAAgAAAAUAAAAOAAcAAgAAAAUAAAANAAcAAgAAAAUAAAAMAAcAAgAAAAUAAAALAAcAAgAAAAUAAAAKAAcAAgAAAAUAAAAJAAcAAgAAAAUAAAAIAAcAAgAAAAUAAAAHAAcAAgAAAAUAAAAGAAcAAgAAAAUAAAAFAAcAAgAAAAUAAAAEAAcAAgAAAAUAAAAIAAYAAgAAAAUAAAAJAAYAAgAAAAUAAAAKAAYAAgAAAAUAAAALAAYAAgAAAAUAAAAMAAYAAgAAAAUAAAANAAYAAgAAAAUAAAAOAAYAAgAAAAUAAAAPAAYAAgAAAAUAAAAQAAYAAgAAAAUAAAAHAAYAAgAAAAUAAAAGAAYAAgAAAAUAAAAFAAYAAgAAAAUAAAA=")
+tile_set = ExtResource("4_0t8eg")
+
+[node name="GPUParticles2D" parent="." instance=ExtResource("2_ydp4s")]
+
+[node name="Title" type="Sprite2D" parent="."]
+position = Vector2(568, 179)
+scale = Vector2(4.65, 4.65)
+texture = ExtResource("5_et5df")
+
+[node name="Floor" type="TileMapLayer" parent="."]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAIAAgAAgACAAAAAAAIAAkAAgACAAEAAAAJAAgAAgADAAAAAAAJAAkAAgADAAEAAAAGAAgAAgACAAAAAAAGAAkAAgACAAEAAAAHAAgAAgADAAAAAAAHAAkAAgADAAEAAAAEAAgAAgACAAAAAAAEAAkAAgACAAEAAAAFAAgAAgADAAAAAAAFAAkAAgADAAEAAAAKAAgAAgACAAAAAAAKAAkAAgACAAEAAAALAAgAAgADAAAAAAALAAkAAgADAAEAAAAMAAgAAgACAAAAAAAMAAkAAgACAAEAAAANAAgAAgADAAAAAAANAAkAAgADAAEAAAAOAAgAAgACAAAAAAAOAAkAAgACAAEAAAAPAAgAAgADAAAAAAAPAAkAAgADAAEAAAAQAAgAAgACAAAAAAAQAAkAAgACAAEAAAARAAgAAgADAAAAAAARAAkAAgADAAEAAAACAAgAAgACAAAAAAACAAkAAgACAAEAAAADAAgAAgADAAAAAAADAAkAAgADAAEAAAAAAAgAAgACAAAAAAAAAAkAAgACAAEAAAABAAgAAgADAAAAAAABAAkAAgADAAEAAAAAAAoAAgACAAIAAAABAAoAAgADAAIAAAACAAoAAgACAAIAAAADAAoAAgADAAIAAAAEAAoAAgACAAIAAAAFAAoAAgADAAIAAAAGAAoAAgACAAIAAAAHAAoAAgADAAIAAAAIAAoAAgACAAIAAAAJAAoAAgADAAIAAAAKAAoAAgACAAIAAAALAAoAAgADAAIAAAAMAAoAAgACAAIAAAANAAoAAgADAAIAAAAOAAoAAgACAAIAAAAPAAoAAgADAAIAAAAQAAoAAgACAAIAAAARAAoAAgADAAIAAAA=")
+tile_set = ExtResource("4_0t8eg")
+
+[node name="bubble_anim" type="AnimatedSprite2D" parent="."]
+unique_name_in_owner = true
+position = Vector2(570, 405)
+scale = Vector2(5.28125, 5.28125)
+sprite_frames = SubResource("SpriteFrames_bcbnv")
+speed_scale = 1.5
+
 [node name="start_game" type="Button" parent="."]
 layout_mode = 0
-offset_left = 456.0
-offset_top = 256.0
-offset_right = 502.0
-offset_bottom = 287.0
-text = "Start
+offset_left = 507.0
+offset_top = 375.0
+offset_right = 632.0
+offset_bottom = 447.0
+theme_override_colors/font_disabled_color = Color(0.796078, 0.858824, 0.988235, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.796078, 0.858824, 0.988235, 1)
+theme_override_colors/font_hover_color = Color(0.796078, 0.858824, 0.988235, 1)
+theme_override_colors/font_pressed_color = Color(0.796078, 0.858824, 0.988235, 1)
+theme_override_colors/font_focus_color = Color(0.796078, 0.858824, 0.988235, 1)
+theme_override_colors/font_color = Color(0.796078, 0.858824, 0.988235, 1)
+theme_override_colors/font_outline_color = Color(0.470588, 0.560784, 0.737255, 1)
+theme_override_constants/outline_size = 16
+theme_override_constants/h_separation = 0
+theme_override_fonts/font = ExtResource("3_bw1kw")
+theme_override_font_sizes/font_size = 58
+theme_override_styles/focus = SubResource("StyleBoxEmpty_2j5e8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_w3fnv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_s2hmd")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_4amce")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ege3s")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_cj0vp")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_2em7e")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_8xv60")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_tquqd")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_cy2fy")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_5laqa")
+text = "Play
 "
 script = ExtResource("1_touuk")
 
 [node name="bubble_sound" parent="start_game" instance=ExtResource("2_ft7fp")]
 
+[node name="DECORATIONS" type="Node2D" parent="."]
+
+[node name="environment_extras" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(125, 497)
+
+[node name="environment_extras3" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(155, 538)
+
+[node name="environment_extras2" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(63, 502)
+scale = Vector2(3, 3)
+
+[node name="environment_extras4" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(914, 557)
+frame = 1
+
+[node name="environment_extras5" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(262, 514)
+scale = Vector2(3, 2)
+frame = 4
+
+[node name="environment_extras6" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(379, 478)
+scale = Vector2(4, 4)
+frame = 7
+
+[node name="environment_extras7" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(428, 514)
+scale = Vector2(4, 4)
+frame = 7
+
+[node name="environment_extras8" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(1075, 484)
+scale = Vector2(4, 4)
+frame = 7
+
+[node name="environment_extras9" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(1130, 510)
+scale = Vector2(4, 4)
+frame = 7
+
+[node name="environment_extras10" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(1019, 493)
+scale = Vector2(4, 4)
+frame = 7
+
+[node name="environment_extras11" parent="DECORATIONS" instance=ExtResource("8_kadha")]
+position = Vector2(740, 557)
+rotation = -0.265002
+scale = Vector2(3, 3)
+frame = 2
+
+[connection signal="animation_finished" from="bubble_anim" to="start_game" method="_on_bubble_anim_animation_finished"]
 [connection signal="pressed" from="start_game" to="start_game" method="_on_pressed"]
 [connection signal="finished" from="start_game/bubble_sound" to="start_game" method="_on_bubble_sound_finished"]

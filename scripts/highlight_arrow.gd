@@ -1,7 +1,7 @@
 extends Area2D
 
-var plain = preload("res://assets/arrows_sheet.png")
-var highlight = preload("res://assets/arrows_highlight.png")
+var plain = preload("res://assets/ui/arrows_sheet.png")
+var highlight = preload("res://assets/ui/arrows_highlight.png")
 
 func _ready():
 	#set default texture to plain

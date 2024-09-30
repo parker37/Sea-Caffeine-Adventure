@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=4 uid="uid://c8gyn745jvvea"]
+[gd_scene load_steps=9 format=4 uid="uid://c8gyn745jvvea"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_8tqeo"]
 [ext_resource type="TileSet" uid="uid://1juse7wq1ch6" path="res://assets/environment_tileset.tres" id="1_h4eu3"]
@@ -7,9 +7,7 @@
 [ext_resource type="Resource" uid="uid://vrxusmomh0tv" path="res://assets/pickups/sharktooth.tres" id="4_omcgw"]
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="5_720cg"]
 [ext_resource type="AudioStream" uid="uid://rqhc0sm1iumn" path="res://assets/sound/shark_voice.mp3" id="6_3owsu"]
-[ext_resource type="Texture2D" uid="uid://cfp7gcv03mvmv" path="res://assets/characters/shark1.png" id="6_du35q"]
-[ext_resource type="Texture2D" uid="uid://curnh54ym0smg" path="res://assets/characters/shark2.png" id="7_f6qkr"]
-[ext_resource type="Texture2D" uid="uid://nnk64hqtfaa0" path="res://assets/characters/earl.png" id="8_edho6"]
+[ext_resource type="PackedScene" uid="uid://nx1tqcroy1tq" path="res://scenes/environment_extras.tscn" id="8_c4bo5"]
 
 [node name="SharkTank" type="Node2D"]
 
@@ -23,9 +21,14 @@ scale = Vector2(2, 2)
 tile_map_data = PackedByteArray("AAAQAAcAAgACAAAAAAAQAAgAAgACAAEAAAAQAAkAAgACAAIAAAARAAcAAgADAAAAAAARAAgAAgADAAEAAAARAAkAAgADAAIAAAAOAAcAAgACAAAAAAAOAAgAAgACAAEAAAAOAAkAAgACAAIAAAAPAAcAAgADAAAAAAAPAAgAAgADAAEAAAAPAAkAAgADAAIAAAAMAAcAAgACAAAAAAAMAAgAAgACAAEAAAAMAAkAAgACAAIAAAANAAcAAgADAAAAAAANAAgAAgADAAEAAAANAAkAAgADAAIAAAAKAAcAAgACAAAAAAAKAAgAAgACAAEAAAAKAAkAAgACAAIAAAALAAcAAgADAAAAAAALAAgAAgADAAEAAAALAAkAAgADAAIAAAAIAAcAAgACAAAAAAAIAAgAAgACAAEAAAAIAAkAAgACAAIAAAAJAAcAAgADAAAAAAAJAAgAAgADAAEAAAAJAAkAAgADAAIAAAAGAAcAAgACAAAAAAAGAAgAAgACAAEAAAAGAAkAAgACAAIAAAAHAAcAAgADAAAAAAAHAAgAAgADAAEAAAAHAAkAAgADAAIAAAAEAAcAAgACAAAAAAAEAAgAAgACAAEAAAAEAAkAAgACAAIAAAAFAAcAAgADAAAAAAAFAAgAAgADAAEAAAAFAAkAAgADAAIAAAACAAcAAgACAAAAAAACAAgAAgACAAEAAAACAAkAAgACAAIAAAADAAcAAgADAAAAAAADAAgAAgADAAEAAAADAAkAAgADAAIAAAAAAAcAAgACAAAAAAAAAAgAAgACAAEAAAAAAAkAAgACAAIAAAABAAcAAgADAAAAAAABAAgAAgADAAEAAAABAAkAAgADAAIAAAAAAAoAAgADAAIAAAABAAoAAgADAAIAAAACAAoAAgADAAIAAAADAAoAAgADAAIAAAAEAAoAAgADAAIAAAAFAAoAAgADAAIAAAAGAAoAAgADAAIAAAAHAAoAAgADAAIAAAAIAAoAAgADAAIAAAAJAAoAAgADAAIAAAAKAAoAAgADAAIAAAALAAoAAgADAAIAAAAMAAoAAgADAAIAAAANAAoAAgADAAIAAAAOAAoAAgADAAIAAAAPAAoAAgADAAIAAAAQAAoAAgADAAIAAAARAAoAAgADAAIAAAA=")
 tile_set = ExtResource("1_h4eu3")
 
+[node name="other" type="TileMapLayer" parent="."]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAGAAAAAgAGAAUAAAAGAAEAAgAGAAYAAAAGAAIAAgAGAAcAAAAHAAAAAgAHAAUAAAAHAAEAAgAHAAYAAAAHAAIAAgAHAAcAAAAIAAAAAgAIAAUAAAAIAAEAAgAIAAYAAAAIAAIAAgAIAAcAAAAJAAAAAgAJAAUAAAAJAAEAAgAJAAYAAAAJAAIAAgAJAAcAAAAKAAAAAgAKAAUAAAAKAAEAAgAKAAYAAAAKAAIAAgAKAAcAAAA=")
+tile_set = ExtResource("1_h4eu3")
+
 [node name="Cave Walls" type="TileMapLayer" parent="."]
 scale = Vector2(2, 2)
-tile_map_data = PackedByteArray("AAARAAcAAAADAAIAAAARAAYAAAADAAIAAAARAAUAAAADAAIAAAARAAQAAAADAAIAAAARAAMAAAADAAIAAAARAAIAAAADAAIAAAARAAEAAAADAAIAAAARAAAAAAADAAIAAAARAAgAAAADAAIAAAAAAAAAAAACAAMAAAABAAAAAAACAAMAAAACAAAAAAACAAMAAAADAAAAAAACAAMAAAAEAAAAAAACAAMAAAAFAAAAAAACAAMAAAAGAAAAAAACAAMAAAAHAAAAAAACAAMAAAAIAAAAAAACAAMAAAAJAAAAAAACAAMAAAAKAAAAAAACAAMAAAALAAAAAAACAAMAAAAMAAAAAAACAAMAAAANAAAAAAACAAMAAAAOAAAAAAACAAMAAAAPAAAAAAADAAMAAAAQAAAAAAADAAIAAAAPAAEAAAADAAQAAAAPAAIAAAADAAQAAAAPAAMAAAADAAQAAAAPAAQAAAADAAQAAAAPAAUAAAADAAQAAAAPAAYAAAADAAQAAAAPAAgAAAADAAUAAAAPAAcAAAADAAQAAAAQAAEAAAADAAIAAAAQAAIAAAADAAIAAAAQAAMAAAADAAIAAAAQAAQAAAADAAIAAAAQAAUAAAADAAIAAAAQAAYAAAADAAIAAAAQAAcAAAADAAIAAAAQAAgAAAADAAIAAAA=")
+tile_map_data = PackedByteArray("AAARAAcAAgACAAIAAAARAAYAAgACAAIAAAARAAUAAgACAAIAAAARAAQAAgACAAIAAAARAAMAAgACAAIAAAARAAIAAgACAAIAAAARAAEAAgACAAIAAAARAAAAAgACAAIAAAARAAgAAgACAAIAAAAAAAAAAgACAAMAAAABAAAAAgACAAMAAAACAAAAAgACAAMAAAADAAAAAgACAAMAAAAEAAAAAgACAAMAAAAFAAAAAgACAAMAAAAGAAAAAgACAAMAAAAHAAAAAgACAAMAAAAIAAAAAgACAAMAAAAJAAAAAgACAAMAAAAKAAAAAgACAAMAAAALAAAAAgACAAMAAAAMAAAAAgACAAMAAAANAAAAAgACAAMAAAAOAAAAAgACAAMAAAAPAAAAAgADAAMAAAAQAAAAAgACAAIAAAAPAAEAAgADAAQAAAAPAAIAAgADAAQAAAAPAAMAAgADAAQAAAAPAAQAAgADAAQAAAAPAAUAAgADAAQAAAAPAAYAAgADAAQAAAAPAAgAAgADAAUAAAAPAAcAAgADAAQAAAAQAAEAAgACAAIAAAAQAAIAAgACAAIAAAAQAAMAAgACAAIAAAAQAAQAAgACAAIAAAAQAAUAAgACAAIAAAAQAAYAAgACAAIAAAAQAAcAAgACAAIAAAAQAAgAAgACAAIAAAA=")
 tile_set = ExtResource("1_h4eu3")
 
 [node name="Camera2D" type="Camera2D" parent="."]
@@ -49,23 +52,47 @@ facing = "left"
 
 [node name="pickup" parent="." instance=ExtResource("3_e1vi6")]
 visible = false
-position = Vector2(1051, 553)
+position = Vector2(650, 494)
 item = ExtResource("4_omcgw")
 
 [node name="character" parent="." instance=ExtResource("5_720cg")]
-position = Vector2(223, 296)
-character = "shark"
-plain_sprite = ExtResource("6_du35q")
+position = Vector2(226, 221)
+character = "shark1"
 voice = ExtResource("6_3owsu")
 
 [node name="character2" parent="." instance=ExtResource("5_720cg")]
-position = Vector2(519, 219)
-character = "shark"
-plain_sprite = ExtResource("7_f6qkr")
+position = Vector2(526, 290)
+character = "shark2"
 voice = ExtResource("6_3owsu")
 
 [node name="character3" parent="." instance=ExtResource("5_720cg")]
-position = Vector2(811, 299)
-character = "shark"
-plain_sprite = ExtResource("8_edho6")
+position = Vector2(814, 228)
+character = "earl"
 voice = ExtResource("6_3owsu")
+
+[node name="DECORATIONS" type="Node2D" parent="."]
+scale = Vector2(2, 2)
+
+[node name="environment_extras" parent="DECORATIONS" instance=ExtResource("8_c4bo5")]
+position = Vector2(74.5, 226.5)
+scale = Vector2(1, 1)
+frame = 5
+
+[node name="environment_extras2" parent="DECORATIONS" instance=ExtResource("8_c4bo5")]
+position = Vector2(184.5, 204.5)
+frame = 7
+
+[node name="environment_extras4" parent="DECORATIONS" instance=ExtResource("8_c4bo5")]
+position = Vector2(210, 214)
+frame = 7
+
+[node name="environment_extras5" parent="DECORATIONS" instance=ExtResource("8_c4bo5")]
+position = Vector2(399.5, 204.5)
+frame = 7
+
+[node name="environment_extras6" parent="DECORATIONS" instance=ExtResource("8_c4bo5")]
+position = Vector2(374.5, 216.5)
+frame = 7
+
+[node name="environment_extras3" parent="DECORATIONS" instance=ExtResource("8_c4bo5")]
+position = Vector2(451, 211)

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnkdug76w4o8n"
-path="res://.godot/imported/squid-highlighted.png-ee8e0f40f210b8f700c0ea911fcb5578.ctex"
+uid="uid://dj1r41bx4d2du"
+path="res://.godot/imported/arrows_sheet.png-ae10d8919a1e57dce6120cc021137005.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/squid-highlighted.png"
-dest_files=["res://.godot/imported/squid-highlighted.png-ee8e0f40f210b8f700c0ea911fcb5578.ctex"]
+source_file="res://assets/ui/arrows_sheet.png"
+dest_files=["res://.godot/imported/arrows_sheet.png-ae10d8919a1e57dce6120cc021137005.ctex"]
 
 [params]
 

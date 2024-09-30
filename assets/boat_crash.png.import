@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dck1iwqx0bv16"
-path="res://.godot/imported/shark2.png-28a029d0434f77756463df6bd62c29b4.ctex"
+uid="uid://cs4bffs5y10vv"
+path="res://.godot/imported/boat_crash.png-5691f00a97242dede08dbfc735688a12.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/shark2.png"
-dest_files=["res://.godot/imported/shark2.png-28a029d0434f77756463df6bd62c29b4.ctex"]
+source_file="res://assets/boat_crash.png"
+dest_files=["res://.godot/imported/boat_crash.png-5691f00a97242dede08dbfc735688a12.ctex"]
 
 [params]
 

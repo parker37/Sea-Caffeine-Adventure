@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dck1iwqx0bv16"
-path="res://.godot/imported/shark2.png-28a029d0434f77756463df6bd62c29b4.ctex"
+uid="uid://dhtejukh5y6q0"
+path="res://.godot/imported/bubble_particle.png-d3123c9946ab7f0509519bb3893095df.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/shark2.png"
-dest_files=["res://.godot/imported/shark2.png-28a029d0434f77756463df6bd62c29b4.ctex"]
+source_file="res://assets/ui/bubble_particle.png"
+dest_files=["res://.godot/imported/bubble_particle.png-d3123c9946ab7f0509519bb3893095df.ctex"]
 
 [params]
 

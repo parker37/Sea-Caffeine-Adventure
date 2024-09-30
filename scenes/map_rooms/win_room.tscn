@@ -1,0 +1,322 @@
+[gd_scene load_steps=20 format=4 uid="uid://bnkf1ywx5w2vr"]
+
+[ext_resource type="TileSet" uid="uid://1juse7wq1ch6" path="res://assets/environment_tileset.tres" id="1_ehg11"]
+[ext_resource type="Texture2D" uid="uid://cfwipv21owmek" path="res://assets/characters/squid.png" id="2_1vibl"]
+[ext_resource type="Texture2D" uid="uid://cggdol3nm2al1" path="res://assets/characters/pufferfish_deflated.png" id="3_5tbw1"]
+[ext_resource type="Texture2D" uid="uid://dck1iwqx0bv16" path="res://assets/characters/shark2.png" id="4_ysq5y"]
+[ext_resource type="Texture2D" uid="uid://dnxllj8hav8fo" path="res://assets/characters/clam.png" id="5_kw7iw"]
+[ext_resource type="Texture2D" uid="uid://cw4a3sy8je0n5" path="res://assets/characters/charles.png" id="6_tu0jn"]
+
+[sub_resource type="Animation" id="Animation_lx07b"]
+length = 2.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Shark2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(),
+"transitions": PackedFloat32Array(),
+"update": 0,
+"values": []
+}
+
+[sub_resource type="Animation" id="Animation_l4ohs"]
+resource_name = "shark"
+length = 1.5
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Shark2:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.933333),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1078, 383), Vector2(1079, 365)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_86rad"]
+_data = {
+"RESET": SubResource("Animation_lx07b"),
+"shark": SubResource("Animation_l4ohs")
+}
+
+[sub_resource type="Animation" id="Animation_vtwm4"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Clam:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [-0.261799]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Clam:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3.1, 3.1)]
+}
+
+[sub_resource type="Animation" id="Animation_vjfog"]
+resource_name = "jump"
+length = 4.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../Clam:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.933333, 2.3, 2.66667, 3.2),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(271, 421), Vector2(336, 363), Vector2(412, 433), Vector2(412, 433), Vector2(336, 363), Vector2(271, 421)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../Clam:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.166667, 0.333333, 0.633333, 0.8, 0.933333, 2.3, 2.4, 2.53333, 2.9, 3.03333, 3.36667),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [0.0, -0.261799, -0.261799, 0.261799, 0.261799, 0.0, 0.0, 0.261799, 0.261799, -0.261799, -0.261799, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../Clam:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.5, 0.8, 2.3, 2.66667, 2.83333),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(3, 3), Vector2(3.1, 3.1), Vector2(3, 3), Vector2(3, 3), Vector2(3.1, 3.1), Vector2(3, 3)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tkjok"]
+_data = {
+"RESET": SubResource("Animation_vtwm4"),
+"jump": SubResource("Animation_vjfog")
+}
+
+[sub_resource type="Animation" id="Animation_v7fty"]
+resource_name = "swim_up"
+length = 3.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("../squid:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(239, 238), Vector2(165, 181), Vector2(239, 238)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("../squid:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.1, 1, 2.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, -0.261799, 0.174533]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("../squid:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.6),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(1.8, 1.8), Vector2(2, 2)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oibe6"]
+_data = {
+"swim_up": SubResource("Animation_v7fty")
+}
+
+[sub_resource type="Animation" id="Animation_qplnr"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(534, 271)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(2, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_d4rlu"]
+resource_name = "clam_jump"
+length = 4.0
+loop_mode = 1
+step = 0.1
+
+[sub_resource type="Animation" id="Animation_k3bhj"]
+resource_name = "puffer_swim"
+length = 2.0
+loop_mode = 1
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(534, 271), Vector2(451, 279), Vector2(610, 269)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath(".:scale")
+tracks/1/interp = 0
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.6, 1.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(-2, 2), Vector2(2, 2), Vector2(-2, 2)]
+}
+
+[sub_resource type="Animation" id="Animation_s8ec8"]
+resource_name = "squid_anim"
+length = 3.0
+loop_mode = 1
+step = 0.1
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_05qys"]
+_data = {
+"RESET": SubResource("Animation_qplnr"),
+"clam_jump": SubResource("Animation_d4rlu"),
+"puffer_swim": SubResource("Animation_k3bhj"),
+"squid_anim": SubResource("Animation_s8ec8")
+}
+
+[node name="WinRoom" type="Node2D"]
+position = Vector2(-30, -1)
+
+[node name="shark_anim" type="AnimationPlayer" parent="."]
+root_node = NodePath("../clam_anim")
+libraries = {
+"": SubResource("AnimationLibrary_86rad")
+}
+autoplay = "RESET"
+
+[node name="clam_anim" type="AnimationPlayer" parent="."]
+root_node = NodePath("../squid_anim")
+libraries = {
+"": SubResource("AnimationLibrary_tkjok")
+}
+autoplay = "jump"
+
+[node name="squid_anim" type="AnimationPlayer" parent="."]
+root_node = NodePath("../pufferfish_anim")
+libraries = {
+"": SubResource("AnimationLibrary_oibe6")
+}
+autoplay = "swim_up"
+
+[node name="pufferfish_anim" type="AnimationPlayer" parent="."]
+root_node = NodePath("../pufferfish")
+libraries = {
+"": SubResource("AnimationLibrary_05qys")
+}
+autoplay = "puffer_swim"
+
+[node name="water" type="TileMapLayer" parent="."]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAAAAAAgAAAAcAAAABAAAAAgAAAAcAAAACAAAAAgAAAAcAAAADAAAAAgAAAAcAAAAEAAAAAgAAAAcAAAAFAAAAAgAAAAcAAAAGAAAAAgAAAAcAAAAHAAAAAgAAAAcAAAAIAAAAAgAAAAcAAAAJAAAAAgAAAAcAAAAKAAAAAgAAAAcAAAALAAAAAgAAAAcAAAAMAAAAAgAAAAcAAAANAAAAAgAAAAcAAAAOAAAAAgAAAAcAAAAPAAAAAgAAAAcAAAAQAAAAAgAAAAcAAAARAAAAAgAAAAcAAAARAAEAAgAAAAcAAAARAAIAAgAAAAcAAAARAAMAAgAAAAcAAAARAAQAAgAAAAcAAAARAAUAAgAAAAcAAAARAAYAAgAAAAcAAAARAAcAAgAAAAcAAAARAAgAAgAAAAcAAAARAAkAAgAAAAcAAAARAAoAAgAAAAcAAAAQAAoAAgAAAAcAAAAPAAoAAgAAAAcAAAAOAAoAAgAAAAcAAAANAAoAAgAAAAcAAAAMAAoAAgAAAAcAAAALAAoAAgAAAAcAAAAKAAoAAgAAAAcAAAAJAAoAAgAAAAcAAAAIAAoAAgAAAAcAAAAHAAoAAgAAAAcAAAAGAAoAAgAAAAcAAAAFAAoAAgAAAAcAAAAEAAoAAgAAAAcAAAADAAoAAgAAAAcAAAACAAoAAgAAAAcAAAABAAoAAgAAAAcAAAAAAAoAAgAAAAcAAAAAAAkAAgAAAAcAAAAAAAgAAgAAAAcAAAAAAAcAAgAAAAcAAAAAAAYAAgAAAAcAAAAAAAUAAgAAAAcAAAAAAAQAAgAAAAcAAAAAAAMAAgAAAAcAAAAAAAIAAgAAAAcAAAAAAAEAAgAAAAcAAAABAAEAAgAAAAcAAAACAAEAAgAAAAcAAAADAAEAAgAAAAcAAAAEAAEAAgAAAAcAAAAFAAEAAgAAAAcAAAAGAAEAAgAAAAcAAAAHAAEAAgAAAAcAAAAIAAEAAgAAAAcAAAAJAAEAAgAAAAcAAAAKAAEAAgAAAAcAAAALAAEAAgAAAAcAAAAMAAEAAgAAAAcAAAANAAEAAgAAAAcAAAAOAAEAAgAAAAcAAAAPAAEAAgAAAAcAAAAQAAEAAgAAAAcAAAAQAAIAAgAAAAcAAAAQAAMAAgAAAAcAAAAQAAQAAgAAAAcAAAAQAAUAAgAAAAcAAAAQAAYAAgAAAAcAAAAQAAcAAgAAAAcAAAAQAAgAAgAAAAcAAAAQAAkAAgAAAAcAAAAPAAkAAgAAAAcAAAAOAAkAAgAAAAcAAAANAAkAAgAAAAcAAAAMAAkAAgAAAAcAAAALAAkAAgAAAAcAAAAKAAkAAgAAAAcAAAAJAAkAAgAAAAcAAAAIAAkAAgAAAAcAAAAHAAkAAgAAAAcAAAAGAAkAAgAAAAcAAAAFAAkAAgAAAAcAAAAEAAkAAgAAAAcAAAADAAkAAgAAAAcAAAACAAkAAgAAAAcAAAABAAkAAgAAAAcAAAABAAgAAgAAAAcAAAACAAgAAgAAAAcAAAADAAgAAgAAAAcAAAAEAAgAAgAAAAcAAAAFAAgAAgAAAAcAAAAGAAgAAgAAAAcAAAAHAAgAAgAAAAcAAAAIAAgAAgAAAAcAAAAJAAgAAgAAAAcAAAAKAAgAAgAAAAcAAAALAAgAAgAAAAcAAAAMAAgAAgAAAAcAAAANAAgAAgAAAAcAAAAOAAcAAgAAAAcAAAAPAAcAAgAAAAcAAAAPAAgAAgAAAAcAAAAOAAgAAgAAAAcAAAAPAAYAAgAAAAcAAAAPAAUAAgAAAAcAAAAPAAQAAgAAAAcAAAAPAAMAAgAAAAcAAAAOAAIAAgAAAAcAAAANAAIAAgAAAAcAAAAMAAIAAgAAAAcAAAALAAIAAgAAAAcAAAAKAAIAAgAAAAcAAAAJAAIAAgAAAAcAAAAIAAIAAgAAAAcAAAAHAAIAAgAAAAcAAAAGAAIAAgAAAAcAAAAFAAIAAgAAAAcAAAAEAAIAAgAAAAcAAAADAAIAAgAAAAcAAAACAAIAAgAAAAcAAAABAAIAAgAAAAcAAAAPAAIAAgAAAAcAAAAOAAQAAgAAAAcAAAAOAAMAAgAAAAcAAAAOAAUAAgAAAAcAAAAOAAYAAgAAAAcAAAANAAcAAgAAAAcAAAANAAYAAgAAAAcAAAANAAUAAgAAAAcAAAANAAQAAgAAAAcAAAANAAMAAgAAAAcAAAAMAAMAAgAAAAcAAAALAAMAAgAAAAcAAAAKAAMAAgAAAAcAAAAJAAMAAgAAAAcAAAAIAAMAAgAAAAcAAAAHAAMAAgAAAAcAAAAGAAMAAgAAAAcAAAAFAAMAAgAAAAcAAAAEAAMAAgAAAAcAAAADAAMAAgAAAAcAAAACAAMAAgAAAAcAAAABAAMAAgAAAAcAAAABAAQAAgAAAAcAAAABAAUAAgAAAAcAAAABAAYAAgAAAAcAAAACAAYAAgAAAAcAAAADAAYAAgAAAAcAAAAEAAYAAgAAAAcAAAAFAAcAAgAAAAcAAAAGAAcAAgAAAAcAAAAHAAcAAgAAAAcAAAAIAAcAAgAAAAcAAAAJAAcAAgAAAAcAAAAKAAcAAgAAAAcAAAALAAcAAgAAAAcAAAALAAYAAgAAAAcAAAAMAAYAAgAAAAcAAAAKAAYAAgAAAAcAAAAJAAYAAgAAAAcAAAAIAAYAAgAAAAcAAAAHAAYAAgAAAAcAAAAGAAYAAgAAAAcAAAAFAAYAAgAAAAcAAAABAAcAAgAAAAcAAAACAAcAAgAAAAcAAAADAAcAAgAAAAcAAAAEAAcAAgAAAAcAAAAMAAcAAgAAAAcAAAAMAAUAAgAAAAcAAAALAAQAAgAAAAcAAAAKAAQAAgAAAAcAAAAJAAQAAgAAAAcAAAAIAAQAAgAAAAcAAAAHAAQAAgAAAAcAAAAGAAQAAgAAAAcAAAAFAAQAAgAAAAcAAAAEAAUAAgAAAAcAAAADAAUAAgAAAAcAAAACAAUAAgAAAAcAAAAFAAUAAgAAAAcAAAAGAAUAAgAAAAcAAAAHAAUAAgAAAAcAAAAIAAUAAgAAAAcAAAAJAAUAAgAAAAcAAAAKAAUAAgAAAAcAAAALAAUAAgAAAAcAAAAMAAQAAgAAAAcAAAAEAAQAAgAAAAcAAAADAAQAAgAAAAcAAAACAAQAAgAAAAcAAAA=")
+tile_set = ExtResource("1_ehg11")
+
+[node name="cave_walls" type="TileMapLayer" parent="."]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAAAAAAgACAAMAAAABAAAAAgACAAMAAAACAAAAAgAEAAMAAAADAAAAAgAFAAMAAAAEAAAAAgAGAAMAAAAFAAAAAgACAAMAAAAGAAAAAgACAAMAAAAHAAAAAgACAAMAAAAIAAAAAgACAAMAAAAJAAAAAgACAAMAAAAKAAAAAgACAAMAAAALAAAAAgACAAMAAAAMAAAAAgACAAMAAAANAAAAAgACAAMAAAAOAAAAAgACAAMAAAAPAAAAAgACAAMAAAAQAAAAAgACAAMAAAARAAAAAgACAAMAAAACAP//AgAEAAIAAAADAP//AgAFAAIAAAAEAP//AgAGAAIAAAA=")
+tile_set = ExtResource("1_ehg11")
+
+[node name="floor" type="TileMapLayer" parent="."]
+scale = Vector2(2, 2)
+tile_map_data = PackedByteArray("AAAAAAcAAgACAAAAAAAAAAgAAgACAAEAAAAAAAkAAgACAAIAAAABAAcAAgADAAAAAAABAAgAAgADAAEAAAABAAkAAgADAAIAAAACAAcAAgACAAAAAAACAAgAAgACAAEAAAACAAkAAgACAAIAAAADAAcAAgADAAAAAAADAAgAAgADAAEAAAADAAkAAgADAAIAAAAEAAcAAgACAAAAAAAEAAgAAgACAAEAAAAEAAkAAgACAAIAAAAFAAcAAgADAAAAAAAFAAgAAgADAAEAAAAFAAkAAgADAAIAAAAGAAcAAgACAAAAAAAGAAgAAgACAAEAAAAGAAkAAgACAAIAAAAHAAcAAgADAAAAAAAHAAgAAgADAAEAAAAHAAkAAgADAAIAAAAIAAcAAgACAAAAAAAIAAgAAgACAAEAAAAIAAkAAgACAAIAAAAJAAcAAgADAAAAAAAJAAgAAgADAAEAAAAJAAkAAgADAAIAAAAKAAcAAgACAAAAAAAKAAgAAgACAAEAAAAKAAkAAgACAAIAAAALAAcAAgADAAAAAAALAAgAAgADAAEAAAALAAkAAgADAAIAAAAMAAcAAgACAAAAAAAMAAgAAgACAAEAAAAMAAkAAgACAAIAAAANAAcAAgADAAAAAAANAAgAAgADAAEAAAANAAkAAgADAAIAAAAOAAcAAgACAAAAAAAOAAgAAgACAAEAAAAOAAkAAgACAAIAAAAPAAcAAgADAAAAAAAPAAgAAgADAAEAAAAPAAkAAgADAAIAAAAQAAcAAgACAAAAAAAQAAgAAgACAAEAAAAQAAkAAgACAAIAAAARAAcAAgADAAAAAAARAAgAAgADAAEAAAARAAkAAgADAAIAAAAAAAoAAgACAAIAAAABAAoAAgACAAIAAAACAAoAAgACAAIAAAADAAoAAgACAAIAAAAEAAoAAgACAAIAAAAFAAoAAgACAAIAAAAGAAoAAgACAAIAAAAHAAoAAgACAAIAAAAIAAoAAgACAAIAAAAJAAoAAgACAAIAAAAKAAoAAgACAAIAAAALAAoAAgACAAIAAAAMAAoAAgACAAIAAAANAAoAAgACAAIAAAAOAAoAAgACAAIAAAAPAAoAAgACAAIAAAAQAAoAAgACAAIAAAARAAoAAgACAAIAAAA=")
+tile_set = ExtResource("1_ehg11")
+
+[node name="TileMapLayer" type="TileMapLayer" parent="."]
+scale = Vector2(3.5, 3.5)
+tile_map_data = PackedByteArray("AAAFAAEAAgAJAAEAAAAFAAIAAgAJAAIAAAAFAAMAAgAJAAMAAAAFAAQAAgAJAAEAAAAGAAEAAgAKAAEAAAAGAAIAAgAKAAIAAAAGAAMAAgAKAAMAAAAGAAQAAgAKAAQAAAAHAAEAAgALAAEAAAAHAAIAAgALAAIAAAAHAAMAAgALAAMAAAAHAAQAAgALAAQAAAAIAAEAAgAMAAEAAAAIAAIAAgAMAAIAAAAIAAMAAgAMAAMAAAAIAAQAAgAMAAQAAAA=")
+tile_set = ExtResource("1_ehg11")
+
+[node name="squid" type="Sprite2D" parent="."]
+position = Vector2(239, 238)
+rotation = 0.0218166
+scale = Vector2(1.8, 1.8)
+texture = ExtResource("2_1vibl")
+
+[node name="pufferfish" type="Sprite2D" parent="."]
+position = Vector2(534, 271)
+scale = Vector2(2, 2)
+texture = ExtResource("3_5tbw1")
+
+[node name="Shark2" type="Sprite2D" parent="."]
+position = Vector2(1078, 383)
+scale = Vector2(-3, 3)
+texture = ExtResource("4_ysq5y")
+
+[node name="Clam" type="Sprite2D" parent="."]
+position = Vector2(271, 421)
+rotation = -0.261799
+scale = Vector2(3.1, 3.1)
+texture = ExtResource("5_kw7iw")
+
+[node name="Charles" type="Sprite2D" parent="."]
+position = Vector2(684, 427)
+scale = Vector2(2, 2)
+texture = ExtResource("6_tu0jn")

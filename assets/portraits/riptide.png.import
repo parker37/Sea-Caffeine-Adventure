@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://hihffqhhi6xv"
-path="res://.godot/imported/charles-highlighted.png-adf0f12f8cd2aecb8330929616cfb26e.ctex"
+uid="uid://g5fkb62nqi7a"
+path="res://.godot/imported/riptide.png-3ec34ca231716001a6e99c076a598dea.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/charles-highlighted.png"
-dest_files=["res://.godot/imported/charles-highlighted.png-adf0f12f8cd2aecb8330929616cfb26e.ctex"]
+source_file="res://assets/portraits/riptide.png"
+dest_files=["res://.godot/imported/riptide.png-3ec34ca231716001a6e99c076a598dea.ctex"]
 
 [params]
 

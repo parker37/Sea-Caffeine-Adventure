@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnbhllfvovspk"
-path="res://.godot/imported/pufferfish-deflated-highlighted.png-f638985b926a280530f1a9489c255cd3.ctex"
+uid="uid://drxjyo8xys7hm"
+path="res://.godot/imported/pufferfish.png-4f5b36e7e362cb84799bb3333e3ce6ed.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/pufferfish-deflated-highlighted.png"
-dest_files=["res://.godot/imported/pufferfish-deflated-highlighted.png-f638985b926a280530f1a9489c255cd3.ctex"]
+source_file="res://assets/characters/pufferfish.png"
+dest_files=["res://.godot/imported/pufferfish.png-4f5b36e7e362cb84799bb3333e3ce6ed.ctex"]
 
 [params]
 

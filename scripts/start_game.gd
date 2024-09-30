@@ -7,8 +7,13 @@ func _ready():
 	bubble_sound = get_node("bubble_sound")
 	
 func _on_pressed() -> void:
+	%bubble_anim.play()
 	bubble_sound.play()
 
 
 func _on_bubble_sound_finished() -> void:
+	get_tree().change_scene_to_file(coffee_room)
+
+
+func _on_bubble_anim_animation_finished() -> void:
 	get_tree().change_scene_to_file(coffee_room)

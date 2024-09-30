@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dck1iwqx0bv16"
-path="res://.godot/imported/shark2.png-28a029d0434f77756463df6bd62c29b4.ctex"
+uid="uid://hihffqhhi6xv"
+path="res://.godot/imported/charles_highlight.png-1acb3f8448396cf046d27359f774e5c4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/shark2.png"
-dest_files=["res://.godot/imported/shark2.png-28a029d0434f77756463df6bd62c29b4.ctex"]
+source_file="res://assets/characters/charles_highlight.png"
+dest_files=["res://.godot/imported/charles_highlight.png-1acb3f8448396cf046d27359f774e5c4.ctex"]
 
 [params]
 

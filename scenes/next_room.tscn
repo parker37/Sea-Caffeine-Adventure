@@ -1,8 +1,8 @@
 [gd_scene load_steps=5 format=3 uid="uid://cjwedkvj6kvqa"]
 
-[ext_resource type="Texture2D" uid="uid://dj1r41bx4d2du" path="res://assets/arrows_sheet.png" id="1_8eygn"]
+[ext_resource type="Texture2D" uid="uid://dj1r41bx4d2du" path="res://assets/ui/arrows_sheet.png" id="1_8eygn"]
 [ext_resource type="Script" path="res://scripts/arrow.gd" id="2_0kmm1"]
-[ext_resource type="Script" path="res://scenes/highlight_arrow.gd" id="3_7r484"]
+[ext_resource type="Script" path="res://scripts/highlight_arrow.gd" id="3_7r484"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ivebh"]
 size = Vector2(21, 18)

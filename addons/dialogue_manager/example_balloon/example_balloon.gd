@@ -48,7 +48,7 @@ var dialogue_line: DialogueLine:
 		var folder : String
 		var dialogue_name : String = dialogue_line.character.to_lower().replace(" ", "")
 		if dialogue_name in ["pearl", "charles", "riptide", "toughguy", "shark1", "shark2", "earl", "cresta"]:
-			folder = "characters"
+			folder = "portraits"
 		else:
 			folder = "icons"
 			

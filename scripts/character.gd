@@ -15,6 +15,8 @@ func _ready() :
 	
 	if character == "clam" and Global.completed_clam:
 		character = "clam_open"
+	elif character == "pufferfish" and Global.completed_pufferfish:
+		character = "pufferfish_deflated"
 	
 	plain = "res://assets/characters/%s.png" % character
 	highlight = "res://assets/characters/%s_highlight.png" % character
@@ -31,4 +33,9 @@ func _input(event):
 		if (get_rect().has_point(to_local(event.position))):
 			Global.dialogue_on = true
 			audiostream.play()
-			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/character_dialogue.dialogue"), character)
+			var character_section = character
+			if character == "shark1" or character == "shark2" or character == "earl":
+				character_section = "shark"
+			elif character == "clam_open":
+				character_section = "clam"
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/character_dialogue.dialogue"), character_section)

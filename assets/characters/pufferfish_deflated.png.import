@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dck1iwqx0bv16"
-path="res://.godot/imported/shark2.png-28a029d0434f77756463df6bd62c29b4.ctex"
+uid="uid://cggdol3nm2al1"
+path="res://.godot/imported/pufferfish_deflated.png-7792e768acf0600234b33a682121305a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/shark2.png"
-dest_files=["res://.godot/imported/shark2.png-28a029d0434f77756463df6bd62c29b4.ctex"]
+source_file="res://assets/characters/pufferfish_deflated.png"
+dest_files=["res://.godot/imported/pufferfish_deflated.png-7792e768acf0600234b33a682121305a.ctex"]
 
 [params]
 

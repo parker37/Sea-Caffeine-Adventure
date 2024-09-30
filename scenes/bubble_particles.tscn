@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=3 uid="uid://dpxl0ch2ejcn"]
+
+[ext_resource type="Texture2D" uid="uid://dhtejukh5y6q0" path="res://assets/ui/bubble_particle.png" id="1_ryhft"]
+
+[sub_resource type="Curve" id="Curve_v6310"]
+min_value = -1.0
+_data = [Vector2(0, -0.230769), 0.0, 0.0, 0, 0, Vector2(0.52, 0.714286), 0.0, 0.0, 0, 0, Vector2(0.966667, -0.648352), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="CurveXYZTexture" id="CurveXYZTexture_mghr0"]
+curve_x = SubResource("Curve_v6310")
+
+[sub_resource type="Curve" id="Curve_278ca"]
+_data = [Vector2(0, 1), 0.0, -4.45055, 0, 0, Vector2(1, 0), -1.0, 0.0, 1, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_cs4pq"]
+curve = SubResource("Curve_278ca")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_qxt73"]
+particle_flag_disable_z = true
+emission_shape = 3
+emission_box_extents = Vector3(5, 5, 1)
+direction = Vector3(0, -1, 0)
+directional_velocity_min = -100.0
+directional_velocity_max = 100.0
+directional_velocity_curve = SubResource("CurveXYZTexture_mghr0")
+gravity = Vector3(0, -100, 0)
+scale_min = 0.4
+turbulence_noise_scale = 0.842
+turbulence_influence_over_life = SubResource("CurveTexture_cs4pq")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_mfdj7"]
+particle_flag_disable_z = true
+emission_shape_scale = Vector3(120, 1, 1)
+emission_shape = 3
+emission_box_extents = Vector3(5, 1, 1)
+gravity = Vector3(0, 0, 0)
+sub_emitter_mode = 1
+sub_emitter_frequency = 4.0
+sub_emitter_keep_velocity = true
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_3luum"]
+
+[node name="bubble_sub_emitter" type="GPUParticles2D"]
+position = Vector2(582, 546)
+amount = 3
+process_material = SubResource("ParticleProcessMaterial_qxt73")
+texture = ExtResource("1_ryhft")
+lifetime = 4.0
+speed_scale = 0.8
+explosiveness = 0.85
+randomness = 0.32
+interp_to_end = 0.003
+
+[node name="GPUParticles2D" type="GPUParticles2D" parent="."]
+amount = 1
+sub_emitter = NodePath("..")
+process_material = SubResource("ParticleProcessMaterial_mfdj7")
+texture = SubResource("ViewportTexture_3luum")

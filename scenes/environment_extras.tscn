@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://nx1tqcroy1tq"]
+
+[ext_resource type="Texture2D" uid="uid://b30hi5xr3o2tv" path="res://assets/environment_extras.png" id="1_8tw5o"]
+
+[node name="environment_extras" type="Sprite2D"]
+scale = Vector2(2, 2)
+texture = ExtResource("1_8tw5o")
+hframes = 3
+vframes = 3
