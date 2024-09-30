@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_dqasq"]
 [ext_resource type="PackedScene" uid="uid://dpxl0ch2ejcn" path="res://scenes/bubble_particles.tscn" id="2_lsru2"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_3quwr"]
-[ext_resource type="Resource" path="res://assets/pickups/sanddollar.tres" id="4_va6y0"]
+[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="4_va6y0"]
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="5_os620"]
 [ext_resource type="AudioStream" uid="uid://brithcvkijhdg" path="res://assets/sound/whale_voice.mp3" id="7_o1ext"]
 [ext_resource type="TileSet" uid="uid://1juse7wq1ch6" path="res://assets/environment_tileset.tres" id="8_lkg21"]

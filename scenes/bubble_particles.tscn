@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://dpxl0ch2ejcn"]
+[gd_scene load_steps=8 format=3 uid="uid://dpxl0ch2ejcn"]
 
 [ext_resource type="Texture2D" uid="uid://dhtejukh5y6q0" path="res://assets/ui/bubble_particle.png" id="1_ryhft"]
 
@@ -40,8 +40,6 @@ sub_emitter_mode = 1
 sub_emitter_frequency = 4.0
 sub_emitter_keep_velocity = true
 
-[sub_resource type="ViewportTexture" id="ViewportTexture_3luum"]
-
 [node name="bubble_sub_emitter" type="GPUParticles2D"]
 position = Vector2(582, 546)
 amount = 3
@@ -57,4 +55,3 @@ interp_to_end = 0.003
 amount = 1
 sub_emitter = NodePath("..")
 process_material = SubResource("ParticleProcessMaterial_mfdj7")
-texture = SubResource("ViewportTexture_3luum")

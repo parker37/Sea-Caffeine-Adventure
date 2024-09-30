@@ -8,7 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://cs4bffs5y10vv" path="res://assets/boat_crash.png" id="3_a0vvr"]
 [ext_resource type="AudioStream" uid="uid://bx7viej32dp78" path="res://assets/sound/squid_voice.mp3" id="4_17y2q"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_ukvg1"]
-[ext_resource type="Resource" path="res://assets/pickups/sanddollar.tres" id="5_nfxa1"]
+[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="5_nfxa1"]
 
 [node name="SquidRoom" type="Node2D"]
 
@@ -42,6 +42,7 @@ offset_left = -40.0
 offset_bottom = 40.0
 grow_horizontal = 0
 pivot_offset = Vector2(50, 0)
+metadata/_edit_use_anchors_ = true
 
 [node name="to_seaweed_room" parent="." instance=ExtResource("2_8eshw")]
 position = Vector2(50, 567)
