@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://ck3cm0t2fyfcj"
-path="res://.godot/imported/clam-closed-highlighted.png-d7324188d3ee5d05b98e029071ba7f80.ctex"
+uid="uid://cnbhllfvovspk"
+path="res://.godot/imported/pufferfish_deflated_highlighted.png-2657953cb24628a125dc206b844d51f1.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/clam-closed-highlighted.png"
-dest_files=["res://.godot/imported/clam-closed-highlighted.png-d7324188d3ee5d05b98e029071ba7f80.ctex"]
+source_file="res://assets/characters/pufferfish_deflated_highlighted.png"
+dest_files=["res://.godot/imported/pufferfish_deflated_highlighted.png-2657953cb24628a125dc206b844d51f1.ctex"]
 
 [params]
 

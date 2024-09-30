@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://qv33bb1gujfk"
-path="res://.godot/imported/whale-highlighted.png-58a80bfacfe244535686e074f7e12d19.ctex"
+uid="uid://b2gg8qqwrq300"
+path="res://.godot/imported/clam_open.png-69e353642f013977add50eae814f8141.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/whale-highlighted.png"
-dest_files=["res://.godot/imported/whale-highlighted.png-58a80bfacfe244535686e074f7e12d19.ctex"]
+source_file="res://assets/characters/clam_open.png"
+dest_files=["res://.godot/imported/clam_open.png-69e353642f013977add50eae814f8141.ctex"]
 
 [params]
 

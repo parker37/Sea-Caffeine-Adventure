@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://drxjyo8xys7hm"
-path="res://.godot/imported/pufferfish-inflated.png-18831ae32b40904cd788d49c660ea344.ctex"
+uid="uid://qv33bb1gujfk"
+path="res://.godot/imported/whale_highlighted.png-653390ff5acc664e4805d120c3d5885a.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/pufferfish-inflated.png"
-dest_files=["res://.godot/imported/pufferfish-inflated.png-18831ae32b40904cd788d49c660ea344.ctex"]
+source_file="res://assets/characters/whale_highlighted.png"
+dest_files=["res://.godot/imported/whale_highlighted.png-653390ff5acc664e4805d120c3d5885a.ctex"]
 
 [params]
 

@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://s2b8pbkr6upl"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_nfgfb"]
-[ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_8eshw"]
+[ext_resource type="PackedScene" path="res://scenes/next_room.tscn" id="2_8eshw"]
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="3_4fycx"]
 [ext_resource type="AudioStream" uid="uid://bx7viej32dp78" path="res://assets/sound/squid_voice.mp3" id="4_17y2q"]
-[ext_resource type="Texture2D" uid="uid://b2gg8qqwrq300" path="res://assets/characters/clam-open.png" id="4_bdbbd"]
+[ext_resource type="Texture2D" uid="uid://b2gg8qqwrq300" path="res://assets/characters/clam_open.png" id="4_bdbbd"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_ukvg1"]
-[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="5_nfxa1"]
+[ext_resource type="Resource" path="res://assets/pickups/sanddollar.tres" id="5_nfxa1"]
 
 [node name="SquidRoom" type="Node2D"]
 

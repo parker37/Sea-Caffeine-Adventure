@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b2gg8qqwrq300"
-path="res://.godot/imported/clam-open.png-23d1e7e5d3049d2647d245b23370b52e.ctex"
+uid="uid://cnkdug76w4o8n"
+path="res://.godot/imported/squid_highlighted.png-922e7014f479013f7b956ab33dc40f4b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/clam-open.png"
-dest_files=["res://.godot/imported/clam-open.png-23d1e7e5d3049d2647d245b23370b52e.ctex"]
+source_file="res://assets/characters/squid_highlighted.png"
+dest_files=["res://.godot/imported/squid_highlighted.png-922e7014f479013f7b956ab33dc40f4b.ctex"]
 
 [params]
 

@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cnkdug76w4o8n"
-path="res://.godot/imported/squid-highlighted.png-ee8e0f40f210b8f700c0ea911fcb5578.ctex"
+uid="uid://drxjyo8xys7hm"
+path="res://.godot/imported/pufferfish_inflated.png-c3b0fc03b47a02ad21b04288dda86ca8.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/squid-highlighted.png"
-dest_files=["res://.godot/imported/squid-highlighted.png-ee8e0f40f210b8f700c0ea911fcb5578.ctex"]
+source_file="res://assets/characters/pufferfish_inflated.png"
+dest_files=["res://.godot/imported/pufferfish_inflated.png-c3b0fc03b47a02ad21b04288dda86ca8.ctex"]
 
 [params]
 

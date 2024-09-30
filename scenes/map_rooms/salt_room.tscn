@@ -1,12 +1,12 @@
 [gd_scene load_steps=8 format=3 uid="uid://bmdwdrgugbcbc"]
 
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="1_xmg6k"]
-[ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_dky61"]
+[ext_resource type="PackedScene" path="res://scenes/next_room.tscn" id="2_dky61"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_mv7dp"]
-[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="4_7jf3r"]
+[ext_resource type="Resource" path="res://assets/pickups/sanddollar.tres" id="4_7jf3r"]
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="5_88dtr"]
 [ext_resource type="AudioStream" uid="uid://cfvax4w3q8u8" path="res://assets/sound/pufferfish_voice.mp3" id="6_jx4oq"]
-[ext_resource type="Texture2D" uid="uid://b2gg8qqwrq300" path="res://assets/characters/clam-open.png" id="6_kjnao"]
+[ext_resource type="Texture2D" uid="uid://b2gg8qqwrq300" path="res://assets/characters/clam_open.png" id="6_kjnao"]
 
 [node name="SaltRoom" type="Node2D"]
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://btxm0r2d6vhbk"
-path="res://.godot/imported/pufferfish-inflated-highlighted.png-ef67ddfaef5e41a29c39427e312f5510.ctex"
+path="res://.godot/imported/pufferfish_inflated_highlighted.png-1d855f9069f82e6af6fcbd28d545b5f7.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/pufferfish-inflated-highlighted.png"
-dest_files=["res://.godot/imported/pufferfish-inflated-highlighted.png-ef67ddfaef5e41a29c39427e312f5510.ctex"]
+source_file="res://assets/characters/pufferfish_inflated_highlighted.png"
+dest_files=["res://.godot/imported/pufferfish_inflated_highlighted.png-1d855f9069f82e6af6fcbd28d545b5f7.ctex"]
 
 [params]
 

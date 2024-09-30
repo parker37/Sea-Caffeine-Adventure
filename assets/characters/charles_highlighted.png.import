@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dyr6a0r1ww0dh"
-path="res://.godot/imported/clam-open-highlighted.png-8246a75d058495297f5283c3d4d78350.ctex"
+uid="uid://hihffqhhi6xv"
+path="res://.godot/imported/charles_highlighted.png-2afaa0c3434dd7dcaf9205a920bc1b96.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/clam-open-highlighted.png"
-dest_files=["res://.godot/imported/clam-open-highlighted.png-8246a75d058495297f5283c3d4d78350.ctex"]
+source_file="res://assets/characters/charles_highlighted.png"
+dest_files=["res://.godot/imported/charles_highlighted.png-2afaa0c3434dd7dcaf9205a920bc1b96.ctex"]
 
 [params]
 
