@@ -1,4 +1,4 @@
-[gd_scene load_steps=34 format=4 uid="uid://bnkf1ywx5w2vr"]
+[gd_scene load_steps=35 format=4 uid="uid://bnkf1ywx5w2vr"]
 
 [ext_resource type="TileSet" uid="uid://1juse7wq1ch6" path="res://assets/environment_tileset.tres" id="1_ehg11"]
 [ext_resource type="Script" path="res://scenes/map_rooms/win_room.gd" id="1_i2vdv"]
@@ -16,6 +16,7 @@
 [ext_resource type="Texture2D" uid="uid://ddjdmsfkhfnvh" path="res://assets/characters/whale.png" id="8_wc48j"]
 [ext_resource type="Texture2D" uid="uid://7ex6di0tale0" path="res://assets/icons/darkcoffee.png" id="11_jgtl0"]
 [ext_resource type="FontFile" uid="uid://dg52r7e1fkrl4" path="res://FatPix-SVG.ttf" id="15_mfqbl"]
+[ext_resource type="PackedScene" uid="uid://bp1y2lhso51uk" path="res://scenes/animation_player.tscn" id="17_0ap06"]
 
 [sub_resource type="Animation" id="Animation_vtwm4"]
 length = 0.001
@@ -276,6 +277,81 @@ _data = {
 "cresta_float": SubResource("Animation_42s4y")
 }
 
+[sub_resource type="Animation" id="Animation_3o2pt"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("shark:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1276, 383)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("shark:scale")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(3, -3)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("shark:texture")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("2_qgr7f")]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Darkcoffee:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Darkcoffee:position")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1279, 382)]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Darkcoffee:texture")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [ExtResource("11_jgtl0")]
+}
+
 [sub_resource type="Animation" id="Animation_8blfj"]
 resource_name = "shark_anim"
 length = 12.0
@@ -353,81 +429,6 @@ tracks/5/keys = {
 "values": [ExtResource("4_q3gtx"), ExtResource("5_mapao"), ExtResource("6_f1fhy")]
 }
 
-[sub_resource type="Animation" id="Animation_3o2pt"]
-length = 0.001
-tracks/0/type = "value"
-tracks/0/imported = false
-tracks/0/enabled = true
-tracks/0/path = NodePath("shark:position")
-tracks/0/interp = 1
-tracks/0/loop_wrap = true
-tracks/0/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1276, 383)]
-}
-tracks/1/type = "value"
-tracks/1/imported = false
-tracks/1/enabled = true
-tracks/1/path = NodePath("shark:scale")
-tracks/1/interp = 1
-tracks/1/loop_wrap = true
-tracks/1/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(3, -3)]
-}
-tracks/2/type = "value"
-tracks/2/imported = false
-tracks/2/enabled = true
-tracks/2/path = NodePath("shark:texture")
-tracks/2/interp = 1
-tracks/2/loop_wrap = true
-tracks/2/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("2_qgr7f")]
-}
-tracks/3/type = "value"
-tracks/3/imported = false
-tracks/3/enabled = true
-tracks/3/path = NodePath("Darkcoffee:visible")
-tracks/3/interp = 1
-tracks/3/loop_wrap = true
-tracks/3/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [false]
-}
-tracks/4/type = "value"
-tracks/4/imported = false
-tracks/4/enabled = true
-tracks/4/path = NodePath("Darkcoffee:position")
-tracks/4/interp = 1
-tracks/4/loop_wrap = true
-tracks/4/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 0,
-"values": [Vector2(1279, 382)]
-}
-tracks/5/type = "value"
-tracks/5/imported = false
-tracks/5/enabled = true
-tracks/5/path = NodePath("Darkcoffee:texture")
-tracks/5/interp = 1
-tracks/5/loop_wrap = true
-tracks/5/keys = {
-"times": PackedFloat32Array(0),
-"transitions": PackedFloat32Array(1),
-"update": 1,
-"values": [ExtResource("11_jgtl0")]
-}
-
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_comju"]
 _data = {
 "RESET": SubResource("Animation_3o2pt"),
@@ -437,6 +438,9 @@ _data = {
 [node name="WinRoom" type="Node2D"]
 position = Vector2(-30, -1)
 script = ExtResource("1_i2vdv")
+
+[node name="AnimationPlayer" parent="." instance=ExtResource("17_0ap06")]
+unique_name_in_owner = true
 
 [node name="clam_anim" type="AnimationPlayer" parent="."]
 root_node = NodePath("../squid_anim")
@@ -568,5 +572,3 @@ theme_override_font_sizes/font_size = 56
 text = "Thanks for 
 playing <3"
 horizontal_alignment = 1
-
-[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
