@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="InvItem" load_steps=4 format=3 uid="uid://b2dr5vyoqfacy"]
+
+[ext_resource type="Script" path="res://scripts/inventory/inventory_item.gd" id="1_q8ctk"]
+[ext_resource type="Texture2D" uid="uid://vdlalk8jjjqn" path="res://assets/icons/burried_cup.png" id="2_m6sfg"]
+[ext_resource type="Texture2D" uid="uid://b7lt2xtolik7" path="res://assets/icons/burried_cup_highlight.png" id="3_37s08"]
+
+[resource]
+script = ExtResource("1_q8ctk")
+name = "burried_cup"
+texture = ExtResource("2_m6sfg")
+texture_highlight = ExtResource("3_37s08")

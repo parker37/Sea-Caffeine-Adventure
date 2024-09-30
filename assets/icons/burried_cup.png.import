@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://di8dil3rfb4yd"
-path="res://.godot/imported/clam.png-b36dc4a36120b94391ef76d4c6e94af1.ctex"
+uid="uid://vdlalk8jjjqn"
+path="res://.godot/imported/burried_cup.png-870e11ea5ba717a49783198a22acc910.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/characters/clam.png"
-dest_files=["res://.godot/imported/clam.png-b36dc4a36120b94391ef76d4c6e94af1.ctex"]
+source_file="res://assets/icons/burried_cup.png"
+dest_files=["res://.godot/imported/burried_cup.png-870e11ea5ba717a49783198a22acc910.ctex"]
 
 [params]
 

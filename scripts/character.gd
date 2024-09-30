@@ -13,10 +13,8 @@ func _ready() :
 	audiostream = get_node("AudioStreamPlayer2D")
 	audiostream.stream = voice
 	
-	if character == "clam" and Global.completed_clam:
+	if character == "clam" and Global.has_table:
 		character = "clam_open"
-	elif character == "pufferfish" and Global.completed_pufferfish:
-		character = "pufferfish_deflated"
 	
 	plain = "res://assets/characters/%s.png" % character
 	highlight = "res://assets/characters/%s_highlight.png" % character

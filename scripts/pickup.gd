@@ -9,7 +9,7 @@ func _ready():
 		"seaweed":
 			if Global.picked_up_seaweed:
 				visible = false
-		"emptycup":
+		"burried_cup":
 			if Global.picked_up_emptycup:
 				visible = false
 		"sharktooth":
@@ -30,13 +30,17 @@ func _input(event):
 	and !Global.dialogue_on):
 		if (get_rect().has_point(to_local(event.position)) and visible):
 			Global.dialogue_on = true
-			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/item_pickups.dialogue"), item_name)
+			var temp_name = item_name
+			if(item_name == "burried_cup"):
+				temp_name = "emptycup"
+				
+			DialogueManager.show_example_dialogue_balloon(load("res://dialogue/item_pickups.dialogue"), temp_name)
 			
 			match item.name:
 				"seaweed":
 					if Global.picked_up_seaweed == true:
 						visible = false
-				"emptycup":
+				"burried_cup":
 					Global.picked_up_emptycup = true
 					visible = false
 				"sharktooth":

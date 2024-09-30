@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://bsytsjaq2a1ig" path="res://scenes/inventory_ui.tscn" id="2_s8kgm"]
 [ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="3_20cjx"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="4_s01ku"]
-[ext_resource type="Resource" uid="uid://dcdpij8q23w40" path="res://assets/pickups/emptycup.tres" id="5_1adyy"]
+[ext_resource type="Resource" uid="uid://b2dr5vyoqfacy" path="res://assets/pickups/burried_cup.tres" id="7_81esx"]
 [ext_resource type="PackedScene" uid="uid://nx1tqcroy1tq" path="res://scenes/environment_extras.tscn" id="8_ki3oy"]
 [ext_resource type="TileSet" uid="uid://1juse7wq1ch6" path="res://assets/environment_tileset.tres" id="8_ktk3l"]
 
@@ -66,10 +66,6 @@ position = Vector2(1116, 508)
 connected_room = "res://scenes/map_rooms/shark_tank.tscn"
 facing = "right"
 
-[node name="pickup" parent="." instance=ExtResource("4_s01ku")]
-position = Vector2(580, 527)
-item = ExtResource("5_1adyy")
-
 [node name="DECORATIONS" type="Node2D" parent="."]
 
 [node name="environment_extras" parent="DECORATIONS" instance=ExtResource("8_ki3oy")]
@@ -83,3 +79,7 @@ frame = 2
 position = Vector2(326, 399)
 scale = Vector2(4, 4)
 frame = 8
+
+[node name="pickup" parent="." instance=ExtResource("4_s01ku")]
+position = Vector2(580, 527)
+item = ExtResource("7_81esx")

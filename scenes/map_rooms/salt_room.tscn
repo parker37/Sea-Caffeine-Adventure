@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://dpxl0ch2ejcn" path="res://scenes/bubble_particles.tscn" id="2_03jmo"]
 [ext_resource type="PackedScene" uid="uid://cjwedkvj6kvqa" path="res://scenes/next_room.tscn" id="2_dky61"]
 [ext_resource type="PackedScene" uid="uid://bl5w6s7u4aq6b" path="res://scenes/pickup.tscn" id="3_mv7dp"]
-[ext_resource type="Resource" uid="uid://dxbfmx754p5bh" path="res://assets/pickups/sanddollar.tres" id="4_7jf3r"]
+[ext_resource type="Resource" path="res://assets/pickups/sanddollar.tres" id="4_7jf3r"]
 [ext_resource type="PackedScene" uid="uid://cht2oa5f8lyqq" path="res://scenes/character.tscn" id="5_88dtr"]
 [ext_resource type="AudioStream" uid="uid://cfvax4w3q8u8" path="res://assets/sound/pufferfish_voice.mp3" id="6_jx4oq"]
 [ext_resource type="PackedScene" uid="uid://nx1tqcroy1tq" path="res://scenes/environment_extras.tscn" id="9_ryl55"]
